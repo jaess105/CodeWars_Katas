@@ -12,4 +12,4 @@ ifdef::env-github[]
 endif::[]
 
 Katas von der Seite Code Wars: https://www.codewars.com +
-link::https://www.codewars.com/users/jaess105[Mein Acc]
+https://www.codewars.com/users/jaess105[Mein Acc]
