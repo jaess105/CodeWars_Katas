@@ -14,15 +14,19 @@ public class Permutations {
             liste.add(character.toString());
         }
         ArrayList<String> ausgabe=new ArrayList<>();
-        for(int i=0;i<s.length();i++){
-            String neuerString=Character.toString(s.charAt(i));
-            for(int k=0;k<s.length();k++){
-                if(i==k) k++;
-                if(k<s.length()) neuerString+=s.charAt(k);
-            }
-            ausgabe.add(neuerString);
+        ArrayList<String> sub=new ArrayList<>();
+        ausgabe.add(s);
+        for(int i=s.length()-1;i>-1;i--){
+            final int nichtiI=i;
+            sub.parallelStream().forEach((s1)->
+            { String string=s1;
+            ausgabe.add(string.replace(string.substring(nichtiI)
+                    ,new StringBuilder(string.substring(nichtiI)).reverse()));
+                    }
+            );
+            sub= (ArrayList<String>) ausgabe.clone();
         }
-
+        ausgabe.stream().distinct().toArray();
         return ausgabe;
     }
 }
