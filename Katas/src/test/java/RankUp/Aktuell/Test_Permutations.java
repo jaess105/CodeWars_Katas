@@ -35,4 +35,15 @@ public class Test_Permutations {
                         .collect(Collectors.toList()) )
                         .isEqualTo(new ArrayList<String>(Arrays.asList("aabb", "abab", "abba", "baab", "baba", "bbaa")));
             }
+    @Test
+    public void example4() {
+        assertThat(Permutations.singlePermutations("aabbc").stream()
+                .sorted()
+                .collect(Collectors.toList()) )
+                .isEqualTo(new ArrayList<String>(Arrays.asList("aabbc", "ababc", "abbac", "baabc", "babac", "bbaac"
+                        ,"aabcb", "abacb", "abbca", "baacb", "babca", "bbaca"
+                        ,"aacbb", "abcab", "abcba", "bacab", "bacba", "bbcaa"
+                        ,"acabb", "acbab", "acbba", "bcaab", "bcaba", "bcbaa"
+                        ,"caabb", "cabab", "cabba", "cbaab", "cbaba", "cbbaa").stream().distinct().collect(Collectors.toList())));
+    }
 }

@@ -7,26 +7,22 @@ import java.util.stream.Stream;
 
 public class Permutations {
     public static List<String> singlePermutations(String s) {
-        // Your code here!
-        //int start=0;
-        ArrayList<String> liste=new ArrayList<>();
-        for(Character character:s.toCharArray()){
-            liste.add(character.toString());
-        }
         ArrayList<String> ausgabe=new ArrayList<>();
         ArrayList<String> sub=new ArrayList<>();
         ausgabe.add(s);
         for(int i=s.length()-1;i>-1;i--){
-            final int nichtiI=i;
-            sub.parallelStream().forEach((s1)->
-            { String string=s1;
-            ausgabe.add(string.replace(string.substring(nichtiI)
-                    ,new StringBuilder(string.substring(nichtiI)).reverse()));
-                    }
-            );
-            sub= (ArrayList<String>) ausgabe.clone();
+            for(int k=0;k<s.length()-i+1;k++) {
+                final int nichtiI = i;
+                final int nichtK = k;
+                sub.parallelStream().forEach((s1) ->{
+                            String string = s1;
+                            ausgabe.add(string.replace(string.substring(nichtiI, nichtiI + nichtK)
+                                    , new StringBuilder(string.substring(nichtiI, nichtiI + nichtK)).reverse()));
+                        }
+                );
+                sub = (ArrayList<String>) ausgabe.clone();
+            }
         }
-        ausgabe.stream().distinct().toArray();
-        return ausgabe;
+        return ausgabe.stream().distinct().collect(Collectors.toList());
     }
 }
