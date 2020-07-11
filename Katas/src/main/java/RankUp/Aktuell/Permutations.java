@@ -8,20 +8,19 @@ import java.util.stream.Stream;
 public class Permutations {
     public static List<String> singlePermutations(String s) {
         ArrayList<String> ausgabe=new ArrayList<>();
-        ArrayList<String> sub=new ArrayList<>();
         ausgabe.add(s);
-        for(int i=s.length()-1;i>-1;i--){
-            for(int k=0;k<s.length()-i+1;k++) {
-                final int nichtiI = i;
-                final int nichtK = k;
-                sub.parallelStream().forEach((s1) ->{
-                            String string = s1;
-                            ausgabe.add(string.replace(string.substring(nichtiI, nichtiI + nichtK)
-                                    , new StringBuilder(string.substring(nichtiI, nichtiI + nichtK)).reverse()));
-                        }
-                );
-                sub = (ArrayList<String>) ausgabe.clone();
+        while(s.length()>2){
+            ausgabe.addAll(singlePermutations(s.substring(1)));
+        }
+        int iterations=0,goalIterations=s.length();
+        while(iterations<goalIterations){
+            for(int i=0;i<s.length()-1;i++){
+                s =
+                new StringBuilder(s).replace(i,i+2,new StringBuilder(s.substring(i, i + 2)).reverse().toString()).toString();
+                ausgabe.add(s);
+                System.out.println(s);
             }
+            iterations++;
         }
         return ausgabe.stream().distinct().collect(Collectors.toList());
     }

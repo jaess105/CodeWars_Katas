@@ -40,10 +40,26 @@ public class Test_Permutations {
         assertThat(Permutations.singlePermutations("aabbc").stream()
                 .sorted()
                 .collect(Collectors.toList()) )
-                .isEqualTo(new ArrayList<String>(Arrays.asList("aabbc", "ababc", "abbac", "baabc", "babac", "bbaac"
+                .isEqualTo(new ArrayList<String>(Arrays.asList(
+                        "aabbc", "ababc", "abbac", "baabc", "babac", "bbaac"
                         ,"aabcb", "abacb", "abbca", "baacb", "babca", "bbaca"
                         ,"aacbb", "abcab", "abcba", "bacab", "bacba", "bbcaa"
                         ,"acabb", "acbab", "acbba", "bcaab", "bcaba", "bcbaa"
-                        ,"caabb", "cabab", "cabba", "cbaab", "cbaba", "cbbaa").stream().distinct().collect(Collectors.toList())));
+                        ,"caabb", "cabab", "cabba", "cbaab", "cbaba", "cbbaa").stream()
+                        .distinct()
+                        .sorted()
+                        .collect(Collectors.toList())));
+    }
+    @Test
+    public void example5() {
+        assertThat(Permutations.singlePermutations("abc").stream()
+                .sorted()
+                .collect(Collectors.toList()) )
+                .isEqualTo(new ArrayList<String>(Arrays.asList(
+                        "abc", "bac", "bca", "cba", "cab", "acb"
+                        ).stream()
+                        .distinct()
+                        .sorted()
+                        .collect(Collectors.toList())));
     }
 }
