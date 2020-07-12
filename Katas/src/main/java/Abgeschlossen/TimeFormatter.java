@@ -1,4 +1,4 @@
-package Kata;
+package Abgeschlossen;
 
 public class TimeFormatter {
 

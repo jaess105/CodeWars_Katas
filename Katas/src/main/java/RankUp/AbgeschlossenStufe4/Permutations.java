@@ -1,6 +1,5 @@
-package RankUp.Aktuell;
+package RankUp.AbgeschlossenStufe4;
 
-import java.beans.ConstructorProperties;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.stream.Collectors;

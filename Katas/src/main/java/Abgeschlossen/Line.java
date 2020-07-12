@@ -1,4 +1,4 @@
-package Kata;
+package Abgeschlossen;
 
 public class Line {
     public String WhoIsNext(String[] names, int n) {

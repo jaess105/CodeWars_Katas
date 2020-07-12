@@ -1,4 +1,4 @@
-package Kata;
+package Abgeschlossen;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -17,7 +17,6 @@ public class Josephus {
             nTE+=k;
             if(nTE>=itemsSize){
                 nTE-=itemsSize+1;
-
             }
             ausgabe.add(items.get(nTE));
         }

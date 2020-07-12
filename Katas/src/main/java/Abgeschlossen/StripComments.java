@@ -1,4 +1,4 @@
-package Kata;
+package Abgeschlossen;
 
 public class StripComments {
     public static String stripComments(String text, String[] commentSymbols) {

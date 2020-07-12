@@ -1,13 +1,9 @@
-package JUnit;
+package Abgeschlossen;
 
-import static org.junit.Assert.assertEquals;
-
-import Kata.StripComments;
-import org.junit.Test;
 
 public class StripCommentsTest {
 
-    @Test
+   /* @Test
     public void stripComments() throws Exception {
         assertEquals(
                 "apples, pears\ngrapes\nbananas",
@@ -19,7 +15,7 @@ public class StripCommentsTest {
                 StripComments.stripComments( "a #b\nc\nd $e f g", new String[] { "#", "$" } )
         );
 
-    }
+    }*/
 
 }
 

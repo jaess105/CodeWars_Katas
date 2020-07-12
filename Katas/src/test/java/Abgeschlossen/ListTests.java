@@ -1,14 +1,11 @@
-package JUnit;
+package Abgeschlossen;
 
-import Kata.Line;
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
-import org.junit.runners.JUnit4;
+
 
 
 
 public class ListTests {
-    @Test
+ /*   @Test
     public void test1() {
         String[] names = new String[] { "Sheldon", "Leonard", "Penny", "Rajesh", "Howard" };
         int n = 1;
@@ -32,5 +29,5 @@ public class ListTests {
         String[] names = new String[] { "Sheldon", "Leonard", "Penny", "Rajesh", "Howard" };
         int n = 8301;
         assertEquals("Rajesh", new Line().WhoIsNext(names, n));
-    }
+    }*/
 }

@@ -1,4 +1,4 @@
-package Kata;
+package Abgeschlossen;
 
 public class AreSame {
 	public static void main (String [] args) {
