@@ -5,14 +5,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+
 public class BefungeInterpreterTests {
     @Test
     @Disabled
     public void tests() {
-        assertEquals(
-                "123456789",
-                new BefungeInterpreter().interpret(">987v>.v\nv456<  :\n>321 ^ _@"));
-
+        assertEquals("123456789", new BefungeInterpreter().interpret(">987v>.v\nv456<  :\n>321 ^ _@"));
     }
     @Test
     public void zahlenZuZahl() {
