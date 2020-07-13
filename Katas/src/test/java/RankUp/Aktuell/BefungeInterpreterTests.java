@@ -78,4 +78,31 @@ public class BefungeInterpreterTests {
                 "12345670",
                 new BefungeInterpreter().interpret("89`7654321"));
     }
+    @Test
+    public void moveRight() {
+        assertEquals(
+                "123456789",
+                new BefungeInterpreter().interpret("98>7654321"));
+    }
+    @Test
+    public void spaceDoesNothing() {
+        assertEquals(
+                "123456789",
+                new BefungeInterpreter().interpret("9 8 7 6 5 4 3 2 1"));
+    }
+    @Test
+    public void backSlashNDoesNothing() {
+        assertEquals(
+                "123456789",
+                new BefungeInterpreter().interpret("9 8 \n7 6 5 4 3 2 1"));
+    }
+    @Test
+    public void moveDown() {
+        assertEquals(
+                "789",
+                new BefungeInterpreter().interpret("9 8 7v\n" +
+                                                        "6 5 4v\n" +
+                                                        "3 2 1 "));
+    }
 }
+
