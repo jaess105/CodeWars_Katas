@@ -122,5 +122,27 @@ public class BefungeInterpreterTests {
                 new BefungeInterpreter().interpret("v>9 8 7@\n" +
                                                         ">^      \n"));
     }
+    @Test
+    public void moveRandom() {
+        assertEquals(
+                "",
+                new BefungeInterpreter().interpret("v@ \n" +
+                                                        ">?@\n" +
+                                                        " @ "));
+    }
+    @Test
+    public void moveRightAfter_() {
+        assertEquals(
+                "1",
+                new BefungeInterpreter().interpret("_01@"));
+    }
+    @Test
+    public void moveLeftAfter_() {
+        assertEquals(
+                "1",
+                new BefungeInterpreter().interpret("1v \n" +
+                                                        "@_2\n" +
+                                                        "@2 "));
+    }
 }
 

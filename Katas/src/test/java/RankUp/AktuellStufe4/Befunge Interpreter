@@ -16,6 +16,7 @@ Your task is to write a method which will interpret Befunge-93 code! Befunge-93 
     v Start moving down.
     ? Start moving in a random cardinal direction.
     _ Pop a value; move right if value = 0, left otherwise.
+        Bis hier alles implementiert
     | Pop a value; move down if value = 0, up otherwise.
     " Start string mode: push each character's ASCII value all the way up to the next ".
     : Duplicate value on top of the stack. If there is nothing on top of the stack, push a 0.
