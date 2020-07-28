@@ -61,6 +61,19 @@ public class BefungeInterpreter {
                     moveLeft=true;
                 }
             }
+            else if(aktuellesZeichen.equals("|")){
+                Integer [] positions=getDirection(moveUp,moveDown,moveLeft,moveRight,new Integer [] {positionX,positionY} );
+                aktuellesZeichen=field.get(positions[0]).get(positions[1]);
+                field.get(positions[0]).remove((int)positions[1]);
+                field.get(positions[0]).add(positions[1]," ");
+                moveUp=moveDown=moveLeft=moveRight=false;
+                if(aktuellesZeichen.equals("0")){
+                    moveDown=true;
+                }
+                else {
+                    moveUp=true;
+                }
+            }
             else{
                 stack.push(aktuellesZeichen);
             }

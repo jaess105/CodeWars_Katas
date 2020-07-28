@@ -13,7 +13,7 @@ public class BefungeInterpreterTests {
         assertEquals("123456789", new BefungeInterpreter().interpret(
                 ">987v>.v\n" +
                      "v456<  :\n" +
-                     ">321 ^ _@"));
+                     ">321 ^_@"));
     }
     @Test
     public void zahlenZuZahl() {
@@ -143,6 +143,22 @@ public class BefungeInterpreterTests {
                 new BefungeInterpreter().interpret("1v \n" +
                                                         "@_2\n" +
                                                         "@2 "));
+    }
+    @Test
+    public void moveDownAfterLineSign() {
+        //=0
+        assertEquals(
+                "1",
+                new BefungeInterpreter().interpret("1|0\n" +
+                                                        " @ \n" ));
+    }
+    @Test
+    public void moveUpAfterLineSign() {
+        //!=0
+        assertEquals(
+                "1",
+                new BefungeInterpreter().interpret("1v@ \n" +
+                                                        " >|1\n" ));
     }
 }
 
