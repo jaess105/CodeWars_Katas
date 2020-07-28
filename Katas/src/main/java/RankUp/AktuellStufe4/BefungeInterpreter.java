@@ -35,72 +35,74 @@ public class BefungeInterpreter {
         field.add(line);
     }
     private void stackFilling() {
-        Boolean moveUp=false,moveDown=false,moveLeft=false,moveRight=true;
+        Boolean moveUp=false,moveDown=false,moveLeft=false,moveRight=true,ascII=false;
         Integer positionX=0,positionY=0, durchlAufCounter=0;
 
         while(!positionX.equals(field.size())&&!positionY.equals(field.get(positionX).size())){
             String aktuellesZeichen=field.get(positionX).get(positionY);
 
-            if(aktuellesZeichen.equals("@")){
-                return;
-            }
-            if(aktuellesZeichen.equals("?")){
-                String directions="<>^v";
-                aktuellesZeichen= String.valueOf(directions.charAt((int)(Math.random()*4)));
-            }
-            if(aktuellesZeichen.equals("_")){
-                Integer [] positions=getDirection(moveUp,moveDown,moveLeft,moveRight,new Integer [] {positionX,positionY} );
-                aktuellesZeichen=field.get(positions[0]).get(positions[1]);
-                field.get(positions[0]).remove((int)positions[1]);
-                field.get(positions[0]).add(positions[1]," ");
-                moveUp=moveDown=moveLeft=moveRight=false;
-                if(aktuellesZeichen.equals("0")){
-                    moveRight=true;
+            if(ascII){
+                if(aktuellesZeichen.equals("\"")){
+                    ascII=false;
                 }
                 else {
-                    moveLeft=true;
+                    stack.push(String.valueOf(Character.getNumericValue(aktuellesZeichen.charAt(0))));
                 }
             }
-            else if(aktuellesZeichen.equals("|")){
-                Integer [] positions=getDirection(moveUp,moveDown,moveLeft,moveRight,new Integer [] {positionX,positionY} );
-                aktuellesZeichen=field.get(positions[0]).get(positions[1]);
-                field.get(positions[0]).remove((int)positions[1]);
-                field.get(positions[0]).add(positions[1]," ");
-                moveUp=moveDown=moveLeft=moveRight=false;
-                if(aktuellesZeichen.equals("0")){
-                    moveDown=true;
+            else {
+                if (aktuellesZeichen.equals("@")) {
+                    return;
                 }
-                else {
-                    moveUp=true;
+                if (aktuellesZeichen.equals("?")) {
+                    String directions = "<>^v";
+                    aktuellesZeichen = String.valueOf(directions.charAt((int) (Math.random() * 4)));
                 }
-            }
-            else{
-                stack.push(aktuellesZeichen);
-            }
+                if (aktuellesZeichen.equals("_")) {
+                    Integer[] positions = getDirection(moveUp, moveDown, moveLeft, moveRight, new Integer[]{positionX, positionY});
+                    aktuellesZeichen = field.get(positions[0]).get(positions[1]);
+                    field.get(positions[0]).remove((int) positions[1]);
+                    field.get(positions[0]).add(positions[1], " ");
+                    moveUp = moveDown = moveLeft = moveRight = false;
+                    if (aktuellesZeichen.equals("0")) {
+                        moveRight = true;
+                    } else {
+                        moveLeft = true;
+                    }
+                } else if (aktuellesZeichen.equals("|")) {
+                    Integer[] positions = getDirection(moveUp, moveDown, moveLeft, moveRight, new Integer[]{positionX, positionY});
+                    aktuellesZeichen = field.get(positions[0]).get(positions[1]);
+                    field.get(positions[0]).remove((int) positions[1]);
+                    field.get(positions[0]).add(positions[1], " ");
+                    moveUp = moveDown = moveLeft = moveRight = false;
+                    if (aktuellesZeichen.equals("0")) {
+                        moveDown = true;
+                    } else {
+                        moveUp = true;
+                    }
+                } else if (aktuellesZeichen.equals("\"")) {
+                    ascII = true;
+                } else {
+                    stack.push(aktuellesZeichen);
+                }
 
-            if(aktuellesZeichen.equals(">")){
-                moveUp=moveDown=moveLeft=moveRight=false;
-                moveRight=true;
+                if (aktuellesZeichen.equals(">")) {
+                    moveUp = moveDown = moveLeft = moveRight = false;
+                    moveRight = true;
+                } else if (aktuellesZeichen.equals("<")) {
+                    moveUp = moveDown = moveLeft = moveRight = false;
+                    moveLeft = true;
+                } else if (aktuellesZeichen.equals("^")) {
+                    moveUp = moveDown = moveLeft = moveRight = false;
+                    moveUp = true;
+                } else if (aktuellesZeichen.equals(("v"))) {
+                    moveUp = moveDown = moveLeft = moveRight = false;
+                    moveDown = true;
+                }
             }
-            else if(aktuellesZeichen.equals("<")){
-                moveUp=moveDown=moveLeft=moveRight=false;
-                moveLeft=true;
-            }
-            else if(aktuellesZeichen.equals("^")){
-                moveUp=moveDown=moveLeft=moveRight=false;
-                moveUp=true;
-            }
-            else if(aktuellesZeichen.equals(("v"))){
-                moveUp=moveDown=moveLeft=moveRight=false;
-                moveDown=true;
-            }
-
-            Integer [] positions=getDirection(moveUp,moveDown,moveLeft,moveRight,new Integer [] {positionX,positionY} );
-            positionX=positions[0];
-            positionY=positions[1];
+            Integer[] positions = getDirection(moveUp, moveDown, moveLeft, moveRight, new Integer[]{positionX, positionY});
+            positionX = positions[0];
+            positionY = positions[1];
         }
-        System.out.println(durchlAufCounter+" "+field.size());
-        durchlAufCounter++;
     }
 
     private Integer[] getDirection(Boolean moveUp, Boolean moveDown, Boolean moveLeft, Boolean moveRight, Integer[] positions) {
@@ -134,16 +136,18 @@ public class BefungeInterpreter {
 
     private String handle(String toInterpret) {
         String instructionsWithTwoPops="+-*/%`";
-        String instructionsWithOnePop="!";
+        String instructionsWithOnePop="!:";
         String noNewValue="<>v^\n ";
         //a and b are initilized so the Compiler shuts up
-        Integer a=0,b=0;
+        Integer a=null,b=null;
         if (instructionsWithTwoPops.contains(toInterpret)){
             a= Integer.valueOf(stack.pop());
             b= Integer.valueOf(stack.pop());
         }
         else if(instructionsWithOnePop.contains(toInterpret)){
-            a= Integer.valueOf(stack.pop());
+            if(!stack.isEmpty()) {
+                a = Integer.valueOf(stack.pop());
+            }
         }
         else if(noNewValue.contains(toInterpret)){
             return "";
@@ -155,7 +159,15 @@ public class BefungeInterpreter {
     }
 
     private String operatorTranslation(String toInterpret, Integer a, Integer b){
-        if(toInterpret.equals("+")){
+        if(toInterpret.equals(":")){
+            if(a==null){
+                return "0";
+            }
+            else{
+                return String.valueOf(a)+String.valueOf(a);
+            }
+        }
+        else if(toInterpret.equals("+")){
             stack.push(String.valueOf(a+b));
         }
         else if(toInterpret.equals("-")){

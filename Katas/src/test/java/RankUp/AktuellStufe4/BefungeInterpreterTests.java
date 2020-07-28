@@ -160,5 +160,23 @@ public class BefungeInterpreterTests {
                 new BefungeInterpreter().interpret("1v@ \n" +
                                                         " >|1\n" ));
     }
+    @Test
+    public void ASCII() {
+        assertEquals(
+                (Character.getNumericValue('b'))+""+(Character.getNumericValue('a')+""+Character.getNumericValue('1')),
+                new BefungeInterpreter().interpret("\"1ab\"" ));
+    }
+    @Test
+    public void duplicateTopOfStack() {
+        assertEquals(
+                "9877",
+                new BefungeInterpreter().interpret("7:89" ));
+    }
+    @Test
+    public void stackEmptyPushNull() {
+        assertEquals(
+                "0",
+                new BefungeInterpreter().interpret(":" ));
+    }
 }
 
