@@ -1,40 +1,43 @@
-package RankUp.Aktuell;
+package RankUp.AktuellStufe4;
 
 import java.util.Stack;
 
-public class BefungeInterpreter {
+public class BefungeInterpreter_wrong_turn {
         private final Stack<String> stack=new Stack<>();
-        private Integer breakingPoint=0;
+        private String [][] array=new String[100][100];
+        private Integer xPointer=0,yPointer=0;
     public String interpret(String code) {
-        for(int i=0;i<code.length();i++){
-            if(code.charAt(i)=='\n'){
-                breakingPoint=i;
-                i=code.length();
+        /*Integer xLength=0;
+        Integer yLength=1;
+        for(Character character:code.toCharArray()){
+            xLength++;
+            if(character.equals('\n')){
+                yLength=code.length()/xLength;
+                array=new String[xLength][yLength];
             }
+        }*/
+        for(Character character:code.toCharArray()){
+            if(character=='\n'){
+                xPointer++;
+                yPointer=0;
+            }
+            array[xPointer][yPointer]= String.valueOf(character);
+            yPointer++;
         }
-        for(int i=0;i<code.length();i++){
-            if(code.charAt(i)=='v'){
-                i+=breakingPoint;
-            }
-            else if(code.charAt(i)=='<'){
-                i-=2;
-            }
-            else if(code.charAt(i)=='^'){
-                i-=breakingPoint;
-            }
-            else if(code.charAt(i)=='>'){
-            }
-            else {
-                stack.push(String.valueOf(code.charAt(i)));
-            }
-        }
-
-        //stack.pop();S
+        xPointer=yPointer=0;
         String ausgabe="";
+        for (;xPointer<array[0].length;xPointer++){
+            for(;yPointer<array.length;yPointer++) {
+                String interpreter = array[xPointer][yPointer];
+                ausgabe += handle(interpreter);
+            }
+        }
+        /*
         while(!stack.empty()){
             String interpreter=stack.pop();
             ausgabe+=handle(interpreter);
         }
+        */
         return ausgabe;
     }
 

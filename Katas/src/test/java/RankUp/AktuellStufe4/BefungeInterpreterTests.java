@@ -1,4 +1,4 @@
-package RankUp.Aktuell;
+package RankUp.AktuellStufe4;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -10,7 +10,10 @@ public class BefungeInterpreterTests {
     @Test
     @Disabled
     public void tests() {
-        assertEquals("123456789", new BefungeInterpreter().interpret(">987v>.v\nv456<  :\n>321 ^ _@"));
+        assertEquals("123456789", new BefungeInterpreter().interpret(
+                ">987v>.v\n" +
+                     "v456<  :\n" +
+                     ">321 ^ _@"));
     }
     @Test
     public void zahlenZuZahl() {
@@ -97,12 +100,27 @@ public class BefungeInterpreterTests {
                 new BefungeInterpreter().interpret("9 8 \n7 6 5 4 3 2 1"));
     }
     @Test
+    public void stop() {
+        assertEquals(
+                "789",
+                new BefungeInterpreter().interpret("9 8 7@\n" +
+                                                        "6 5 4 \n" +
+                                                        "3 2 1 "));
+    }
+    @Test
     public void moveDown() {
         assertEquals(
                 "789",
                 new BefungeInterpreter().interpret("9 8 7v\n" +
                                                         "6 5 4v\n" +
                                                         "3 2 1 "));
+    }
+    @Test
+    public void moveUp() {
+        assertEquals(
+                "789",
+                new BefungeInterpreter().interpret("v>9 8 7@\n" +
+                                                        ">^      \n"));
     }
 }
 
