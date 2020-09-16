@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Ahhhhhrhfgg</title>
+
+</head>
+<body>
+
+  <p>Geben Sie einen String ein von dem Sie die unterschiedlichen Zeichen zählen wollen</p>
+  <p>
+    <label for="Texteingabe">Texteingabe:</label>
+    <input type="text" name="texteingabe" id="texteingabe" size="25">
+  </p>
+  <button onclick="myFunction()">Click me</button> 
+  <p>
+    <label for="Ergebnis">Ergebnis: </label>
+    <lable id="show" onclick="myFunction()">10</lable>
+    <output type="text" name="textAusgabe" id="textAusgabe" size="25">    
+  </p>
+
+<script> 
+
+function myFunction() {
+  document.getElementById("show").innerHTML = duplicateCount(document.getElementById("texteingabe"));
+}  
+function duplicateCount(text){
+    let existingChars =[];
+    let highestAccurance=0;
+    for(let i=0; i< text.length;i++){
+        if(existingChars.includes(text.charAt(i))){
+            existingChars[
+                existingChars.find(char => char === text.charAt(i))
+            ]++;
+        }
+        else{
+            existingChars.push(text.charAt(i));
+        }
+    }
+    for(let i=0;i<existingChars.length;i++){
+      let element=existingChars[i];
+      document.write(existingChars[i]);
+      if(element>highestAccurance){
+        highestAccurance=element;
+      }
+    }
+  
+    return highestAccurance;
+}
+</script>
+<!-- <script src="duplicateCount.js">//so wird die Datei hello.js aufgerufen und der dort enthaltene JS Code ausgeführt</script> -->
+
+
+
+</body>
+</html>
