@@ -15,11 +15,10 @@ import java.util.stream.Collectors;
 
 public class SpinWords {
     public String spinWords(String sentence) {
-        return Arrays.asList(sentence.split(" "))
-                .stream()
+        return Arrays.stream(sentence.split(" "))
                 .map(string->string.length() >= 5?string = new StringBuilder(string).reverse().toString():string)
                 .collect(Collectors.joining(" "));
-        //Array as List to use stream API. split into separate Strings at each space
+        //Arrays stream to use stream API on String. split into separate Strings at each space
         //if string ist longer than 4 characters reverse the string else do nothing
         //collect the String array by joining it back to one String using space as separator
     }
