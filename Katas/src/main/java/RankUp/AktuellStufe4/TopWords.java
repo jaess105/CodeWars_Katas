@@ -32,10 +32,12 @@ Bonus points (not really, but just for fun):
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class TopWords {
 
     public static List<String> top3(String text) {
+        Pattern pattern
         Arrays.stream(text.split("[ \n]")).filter(string->!string.equals(" ")).forEach(System.out::println);
         return null;
     }

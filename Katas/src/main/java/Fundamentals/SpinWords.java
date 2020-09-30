@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 public class SpinWords {
     public String spinWords(String sentence) {
         return Arrays.stream(sentence.split(" "))
-                .map(string->string.length() >= 5?string = new StringBuilder(string).reverse().toString():string)
+                .map(string -> string.length() >= 5 ? string = new StringBuilder(string).reverse().toString() : string)
                 .collect(Collectors.joining(" "));
         //Arrays stream to use stream API on String. split into separate Strings at each space
         //if string ist longer than 4 characters reverse the string else do nothing
