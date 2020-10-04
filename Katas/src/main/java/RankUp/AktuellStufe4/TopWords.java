@@ -1,6 +1,7 @@
 package RankUp.AktuellStufe4;
 
 /*
+https://www.codewars.com/kata/51e056fe544cf36c410000fb
 Write a function that, given a string of text (possibly with punctuation and line-breaks),
 returns an array of the top-3 most occurring words, in descending order of the number of occurrences.
 Assumptions:
@@ -26,8 +27,6 @@ For java users, the calls will actually be in the form: TopWords.top3(String s),
 Bonus points (not really, but just for fun):
     Avoid creating an array whose memory footprint is roughly as big as the input text.
     Avoid sorting the entire array of unique words.
-
-
  */
 
 import java.util.Arrays;
@@ -37,8 +36,8 @@ import java.util.regex.Pattern;
 public class TopWords {
 
     public static List<String> top3(String text) {
-        Pattern pattern
-        Arrays.stream(text.split("[ \n]")).filter(string->!string.equals(" ")).forEach(System.out::println);
+        Pattern pattern= Pattern.compile("^\r");
+        Arrays.stream(text.split(" |\n|\r")).filter(string->!pattern.matcher(string).find()).forEach(System.out::println);
         return null;
     }
 }
