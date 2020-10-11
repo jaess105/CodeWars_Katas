@@ -29,15 +29,36 @@ Bonus points (not really, but just for fun):
     Avoid sorting the entire array of unique words.
  */
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class TopWords {
 
     public static List<String> top3(String text) {
-        Pattern pattern= Pattern.compile("^\r");
-        Arrays.stream(text.split(" |\n|\r")).filter(string->!pattern.matcher(string).find()).forEach(System.out::println);
-        return null;
+        List<String> strings= (List<String>) Arrays.stream(text.split(" "))
+                .map(string->string.chars()
+                            .mapToObj(charachter->Character
+                                    .toString(charachter)
+                                    .replaceAll("[.:;,/-]",""))
+                        .sorted()
+                        .collect(Collectors.toList()));
+        HashMap<Long,String> map=new HashMap<>();
+        List<String> finalStrings = strings;
+        strings.forEach((string1)->
+                map.put(finalStrings.stream().filter(string2->string2.equals(string1)).count(),string1)
+        );
+        Long [] arr= map.keySet().toArray(new Long[0]);
+        strings=new ArrayList<>();
+        for(int i=0;i<3;i++){
+            if(!arr[i].equals(null)) {
+                strings.add(map.get(arr[i]));
+            }
+        }
+        return strings;
     }
 }
