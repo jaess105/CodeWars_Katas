@@ -29,31 +29,46 @@ Bonus points (not really, but just for fun):
     Avoid sorting the entire array of unique words.
  */
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class TopWords {
 
     public static List<String> top3(String text) {
         final var strings= Arrays.stream(text.split(" ")).map(string->string.chars().mapToObj(charachter->Character.toString(charachter).toLowerCase().replaceAll("[.:;,/-]","")).collect(Collectors.joining()).replaceAll("^['.:;,/-]+","")).filter(string->(!string.equals(""))).collect(Collectors.toList());
+
+
+        //Ab hier ist gut. Der Alg um die Wörter raus zu kriegen funktioniert noch nicht ganz...
         HashMap<String,Long> map=new HashMap<>();
         strings.forEach((string1)->map.put(string1,strings.stream().filter(string2->string2.equals(string1)).count()));
-        List<Long> arr= Arrays.stream((map.values().toArray(new Long[0]))).sorted().collect(Collectors.toList());
-        arr.forEach(System.out::println);
-        //Ich musste die HasMap umdrehen, da ansonsten ein Key an mehrer Values vergeben wurde
-        //Daher muss ich jetzt nach den Values und nicht nach den keys sortieren
-        //Könnte sein, dass das gesamte HasMap konzept sinnlos wird...
-        /*
-        List<String> finalStrings=new ArrayList<>();
-        for(int i=arr.size()-1;i>=0&&i>arr.size()-4;i--){
-            finalStrings.add(map.get(arr.get(i)));
-        }
-        return finalStrings;
+        map.keySet().forEach(System.out::println);
 
-         */
-        return null;
+        String [] keys=new String[map.keySet().size()];
+        keys=map.keySet().toArray(keys);
+        boolean switched=true;
+        while(switched) {
+            switched=false;
+            for (int i = 0; i < keys.length - 1; i++) {
+                if (map.get(keys[i]) < map.get(keys[i + 1])) {
+                    String tmp = keys[i];
+                    keys[i] = keys[i + 1];
+                    keys[i + 1] = tmp;
+                    switched = true;
+                }
+            }
+        }
+        if(keys.length<1){
+            return new ArrayList<>();
+        }
+        else if(keys.length<2){
+            return Arrays.asList(keys[0]);
+        }
+        else if(keys.length<3){
+            return Arrays.asList(keys[0],keys[1]);
+        }
+        else {
+            return Arrays.asList((keys[0]), (keys[1]), (keys[2]));
+        }
     }
+
 }
