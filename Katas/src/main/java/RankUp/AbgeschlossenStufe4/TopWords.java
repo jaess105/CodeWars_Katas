@@ -1,4 +1,4 @@
-package RankUp.AktuellStufe4;
+package RankUp.AbgeschlossenStufe4;
 
 /*
 https://www.codewars.com/kata/51e056fe544cf36c410000fb

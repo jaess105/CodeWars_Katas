@@ -1,6 +1,6 @@
-package RankUp.AktuellStufe4;
+package RankUp.AbgeschlossenStufe4;
 
-import org.junit.jupiter.api.Disabled;
+import RankUp.AbgeschlossenStufe4.TopWords;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
