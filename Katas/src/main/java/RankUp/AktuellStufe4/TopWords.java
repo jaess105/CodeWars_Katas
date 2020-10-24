@@ -61,7 +61,7 @@ public class TopWords {
                 }
             }
         }
-        /*if(keys.length<1){
+        if(keys.length<1){
             return new ArrayList<>();
         }
         else if(keys.length<2){
@@ -73,12 +73,6 @@ public class TopWords {
         else {
             return Arrays.asList((keys[0]), (keys[1]), (keys[2]));
         }
-        */
-        ArrayList<String> finalList=new ArrayList<>();
-        Optional.ofNullable(keys[0]).ifPresent(string->finalList.add(string));
-        Optional.ofNullable(keys[1]).ifPresent(string->finalList.add(string));
-        Optional.ofNullable(keys[2]).ifPresent(string->finalList.add(string));
-        return finalList;
     }
 
 }
