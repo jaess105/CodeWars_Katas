@@ -1,4 +1,4 @@
-package RankUp.AktuellStufe4;
+package RankUp.AbgeschlossenStufe4;
 
 /*
 https://www.codewars.com/kata/51e056fe544cf36c410000fb
@@ -35,13 +35,17 @@ import java.util.stream.Collectors;
 public class TopWords {
 
     public static List<String> top3(String text) {
-        final var strings= Arrays.stream(text.split(" ")).map(string->string.chars().mapToObj(charachter->Character.toString(charachter).toLowerCase().replaceAll("[.:;,/-]","")).collect(Collectors.joining()).replaceAll("^['.:;,/-]+","")).filter(string->(!string.equals(""))).collect(Collectors.toList());
-
-
-        //Ab hier ist gut. Der Alg um die Wörter raus zu kriegen funktioniert noch nicht ganz...
+        text=text.replaceAll("[?_!.:;,/-]"," ");
+        final var strings= Arrays.stream(text.split(" "))
+                .map(string->string.chars().mapToObj(charachter->Character.toString(charachter)
+                        .toLowerCase())
+                        //.replaceAll("[?_!.:;,/-]",""))
+                        .collect(Collectors.joining())
+                        .replaceAll("^['.:;,/-]+",""))
+                .filter(string->(!string.equals(""))).collect(Collectors.toList());
         HashMap<String,Long> map=new HashMap<>();
         strings.forEach((string1)->map.put(string1,strings.stream().filter(string2->string2.equals(string1)).count()));
-        map.keySet().forEach(System.out::println);
+//        map.keySet().forEach(System.out::println);
 
         String [] keys=new String[map.keySet().size()];
         keys=map.keySet().toArray(keys);
