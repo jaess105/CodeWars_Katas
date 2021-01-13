@@ -37,10 +37,22 @@ public class ConnectFour {
         for(int i=0;i<7;i++){
             spielfeld.add(new ArrayList<>());
         }
-        piecesPositionList.stream()
-                .map(s->s.split("_"))
-                .forEach(arr->spielfeld.get(arr[0].charAt(0)-65).add(arr[1]));
+        final String outcome;
+        piecesPositionList.split("_");
+                .forEach(arr->{
+                    spielfeld.get(arr[0].charAt(0)-65).add(arr[1]);
+                    outcome = getWinner(spielfeld);
+                    //1 check if there are enough elements vertically or horizontally
+                    //2 if true check if the elements from the starting point on out are in the same color add one for each
+                    //3 if higher than 4 outcome = color of element
+                });
+
         // retrun "Red" or "Yellow" or "Draw"
         return "Draw";
+    }
+
+    private static String getWinner(List<List<String>> spielfeld) {
+
+        return null;
     }
 }
