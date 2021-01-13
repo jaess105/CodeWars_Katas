@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Connect Four
+ * Connect Four https://www.codewars.com/kata/56882731514ec3ec3d000009/train/java
  * Take a look at wiki description of Connect Four game:
  * <p>
  * Wiki Connect Four
