@@ -2,6 +2,7 @@ package Fundamentals;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 /**
@@ -60,7 +61,6 @@ public class ConnectFour {
     // retrun "Red" or "Yellow" or "Draw"
     private static String getWinner(List<List<String>> spielfeld, int alphabeticalPos) {
         List<String> row = spielfeld.get(alphabeticalPos);
-        boolean won = false;
         if (fourInRow(row, alphabeticalPos)
                 || fourInLine(spielfeld, alphabeticalPos)
                 || fourVertically(spielfeld, alphabeticalPos)) {
@@ -70,8 +70,55 @@ public class ConnectFour {
     }
 
     private static boolean fourVertically(List<List<String>> spielfeld, int alphabeticalPos) {
-        Spielfeld
+        //von links unten nach rechts
+        int hoehe = spielfeld.get(alphabeticalPos).size() - 1;
+        int sameColorCount = 0;
+        String colorOfOrigin = spielfeld.get(alphabeticalPos).get(hoehe);
+        sameColorCount = fromLowerLeftToUpperRigth(spielfeld, alphabeticalPos, hoehe, sameColorCount, colorOfOrigin);
+        sameColorCount = Integer.max(sameColorCount, fromUpperLeftToLowerRigth(spielfeld, alphabeticalPos, hoehe, sameColorCount, colorOfOrigin));
+        return sameColorCount >= 3;
+    }
 
+    private static int fromUpperLeftToLowerRigth(List<List<String>> spielfeld, int alphabeticalPos, int hoehe, int sameColorCount, String colorOfOrigin) {
+        Predicate<Integer> insideLowerBorders = (i) ->
+                (hoehe + i >= 0 && alphabeticalPos - i >= 0
+                        && spielfeld.get(alphabeticalPos - i).size() > hoehe + i);
+        for (int i = 1; insideLowerBorders.test(i); i++) {
+            if (colorOfOrigin.equals(spielfeld.get(alphabeticalPos - i).get(hoehe + i))) {
+                sameColorCount++;
+            } else {
+                break;
+            }
+        }
+        for (int i = 1; alphabeticalPos + i < spielfeld.size() && hoehe - i < spielfeld.get(alphabeticalPos + i).size()&&hoehe -i >=0; i++) {
+            if (colorOfOrigin.equals(spielfeld.get(alphabeticalPos + i).get(hoehe - i))) {
+                sameColorCount++;
+            } else {
+                break;
+            }
+        }
+        return sameColorCount;
+    }
+
+    private static int fromLowerLeftToUpperRigth(List<List<String>> spielfeld, int alphabeticalPos, int hoehe, int sameColorCount, String colorOfOrigin) {
+        Predicate<Integer> insideLowerBorders = (i) ->
+                (hoehe - i >= 0 && alphabeticalPos - i >= 0
+                        && spielfeld.get(alphabeticalPos - i).size() > hoehe - i);
+        for (int i = 1; insideLowerBorders.test(i); i++) {
+            if (colorOfOrigin.equals(spielfeld.get(alphabeticalPos - i).get(hoehe - i))) {
+                sameColorCount++;
+            } else {
+                break;
+            }
+        }
+        for (int i = 1; alphabeticalPos + i < spielfeld.size() && hoehe + i < spielfeld.get(alphabeticalPos + i).size(); i++) {
+            if (colorOfOrigin.equals(spielfeld.get(alphabeticalPos + i).get(hoehe + i))) {
+                sameColorCount++;
+            } else {
+                break;
+            }
+        }
+        return sameColorCount;
     }
 
     private static boolean fourInLine(List<List<String>> spielfeld, int alphabeticalPos) {
@@ -90,7 +137,7 @@ public class ConnectFour {
                 break;
             }
         }
-        return counter > 2;
+        return counter >= 3;
     }
 
     private static boolean sameColor(List<List<String>> spielfeld, int alphabeticalPos, int counter, int i) {
@@ -106,7 +153,6 @@ public class ConnectFour {
             return spielfeld.get(alphabeticalPos).size() <= spielfeld.get(alphabeticalPos + i).size();
         }
         return false;
-
     }
 
     private static boolean fourInRow(List<String> row, int alphabeticalPos) {
