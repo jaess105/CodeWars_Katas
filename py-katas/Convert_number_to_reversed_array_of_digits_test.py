@@ -7,7 +7,6 @@ def basic_test_cases():
         assert actual == expected, str
     def first_test():
         test(digitize(35231), [1, 3, 2, 5, 3])
-        #assert  list == , "test failed was: " + list + "expected" 
     def second_test():
         assert (digitize(23582357) == [7, 5, 3, 2, 8, 5, 3, 2]), "2 test failed"
     def third_test():
