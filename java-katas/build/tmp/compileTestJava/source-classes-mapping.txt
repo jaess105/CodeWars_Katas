@@ -1,0 +1,42 @@
+Fundamentals/StockListTest.java
+ Fundamentals.StockListTest
+Fundamentals/CaesarCipherTest.java
+ Fundamentals.CaesarCipherTest
+RankUp/AktuellStufe5/PowerSumDigTests.java
+ RankUp.AktuellStufe5.PowerSumDigTests
+Fundamentals/SquareDigitTest.java
+ Fundamentals.SquareDigitTest
+repetition/ReverseWordsTest.java
+ repetition.ReverseWordsTest
+Abgeschlossen/JosephusTest.java
+ Abgeschlossen.JosephusTest
+RankUp/AbgeschlossenStufe4/TopWordsTest.java
+ RankUp.AbgeschlossenStufe4.TopWordsTest
+Abgeschlossen/BrainLuckTest.java
+ Abgeschlossen.BrainLuckTest
+Fundamentals/VowelsTest.java
+ Fundamentals.VowelsTest
+Abgeschlossen/ListTests.java
+ Abgeschlossen.ListTests
+RankUp/AktuellStufe4/SortTreeTest.java
+ RankUp.AktuellStufe4.SortTreeTest
+RankUp/AbgeschlossenStufe4/Test_Permutations.java
+ RankUp.AbgeschlossenStufe4.Test_Permutations
+RankUp/AktuellStufe4/BefungeInterpreterTests.java
+ RankUp.AktuellStufe4.BefungeInterpreterTests
+Fundamentals/SpinWordsTest.java
+ Fundamentals.SpinWordsTest
+Fundamentals/MatrixTest.java
+ Fundamentals.MatrixTest
+Fundamentals/ConnectFourTest.java
+ Fundamentals.ConnectFourTest
+Abgeschlossen/TimeFormatterTest.java
+ Abgeschlossen.TimeFormatterTest
+Fundamentals/PangramTest.java
+ Fundamentals.PangramTest
+Fundamentals/AreSameTest.java
+ Fundamentals.AreSameTest
+Fundamentals/CountingDuplicatesTest.java
+ Fundamentals.CountingDuplicatesTest
+Abgeschlossen/StripCommentsTest.java
+ Abgeschlossen.StripCommentsTest

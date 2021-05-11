@@ -1,0 +1,51 @@
+Abgeschlossen/Line.java
+ Abgeschlossen.Line
+Fundamentals/ConnectFour.java
+ Fundamentals.ConnectFour
+Abgeschlossen/Josephus.java
+ Abgeschlossen.Josephus
+RankUp/AbgeschlossenStufe4/Permutations.java
+ RankUp.AbgeschlossenStufe4.Permutations
+Abgeschlossen/AreSame.java
+ Abgeschlossen.AreSame
+Abgeschlossen/BrainLuck.java
+ Abgeschlossen.BrainLuck
+Abgeschlossen/TimeFormatter.java
+ Abgeschlossen.TimeFormatter
+Fundamentals/Vowels.java
+ Fundamentals.Vowels
+RankUp/AktuellStufe4/Node.java
+ RankUp.AktuellStufe4.Node
+repetition/ReverseWords.java
+ repetition.ReverseWords
+RankUp/AktuellStufe4/BefungeInterpreter.java
+ RankUp.AktuellStufe4.BefungeInterpreter
+RankUp/AbgeschlossenStufe4/TopWords.java
+ RankUp.AbgeschlossenStufe4.TopWords
+Fundamentals/CountingDuplicates.java
+ Fundamentals.CountingDuplicates
+RankUp/AktuellStufe5/PowerSumDig.java
+ RankUp.AktuellStufe5.PowerSumDig
+Fundamentals/AreSame.java
+ Fundamentals.AreSame
+Abgeschlossen/Kata.java
+ Abgeschlossen.Kata
+Abgeschlossen/StripComments.java
+ Abgeschlossen.StripComments
+RankUp/AktuellStufe4/BefungeInterpreter_wrong_turn.java
+ RankUp.AktuellStufe4.BefungeInterpreter_wrong_turn
+Fundamentals/SquareDigit.java
+ Fundamentals.SquareDigit
+Fundamentals/CaesarCipher.java
+ Fundamentals.CaesarCipher
+ Fundamentals.CaesarCipher$UpOrDown
+RankUp/AktuellStufe4/SortTree.java
+ RankUp.AktuellStufe4.SortTree
+Fundamentals/PangramChecker.java
+ Fundamentals.PangramChecker
+Fundamentals/SpinWords.java
+ Fundamentals.SpinWords
+Fundamentals/StockList.java
+ Fundamentals.StockList
+Fundamentals/Matrix.java
+ Fundamentals.Matrix
