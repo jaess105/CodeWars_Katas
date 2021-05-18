@@ -36,18 +36,7 @@ public class InsaneColouredTriangles {
       }
       charry = sb;
     }
-    Arrays.sort(charry)^
     return charry[0];
-  }
-  public static int[] flip(char dir, int[] arr) {
-
-    if (dir == 'R') {
-      Arrays.sort(arr);
-    } else {
-      List<int[]> ints = Arrays.asList(arr);
-      ints.sort(Collections.reverseOrder());
-    }
-    return arr;
   }
 }
 
