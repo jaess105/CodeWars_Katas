@@ -1,5 +1,11 @@
 package RankUp.stufe2;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.function.Supplier;
+
 /**
  * https://www.codewars.com/kata/5a331ea7ee1aae8f24000175/train/java Its not how its supposed to be
  * done. But why use your brian, if you can use brute force.
@@ -30,7 +36,18 @@ public class InsaneColouredTriangles {
       }
       charry = sb;
     }
+    Arrays.sort(charry)^
     return charry[0];
+  }
+  public static int[] flip(char dir, int[] arr) {
+
+    if (dir == 'R') {
+      Arrays.sort(arr);
+    } else {
+      List<int[]> ints = Arrays.asList(arr);
+      ints.sort(Collections.reverseOrder());
+    }
+    return arr;
   }
 }
 
