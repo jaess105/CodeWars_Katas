@@ -1,11 +1,7 @@
 package stufe5;
 
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
 /**
+ * https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c
  * The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence
  * in an array or list of integers:
  * <p>
@@ -16,39 +12,44 @@ import java.util.stream.Collectors;
  * Empty list is considered to have zero greatest sum. Note that the empty list or array is also a
  * valid sublist/subarray.
  */
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+
 public class Max {
 
-  public static int sequence(int[] arr) {
-    List<Integer> ints = toList(arr);
-    ints = ints.stream().dropWhile(x -> x <= 0).collect(Collectors.toList());
-    removeNegativeElementsFromEnd(ints);
-    int sum = getSum(ints);
-    for (int i = 0; i < ints.size(); i++) {
-      if (sum - ints.get(i) >= sum) {
-        ints = max(ints, max(ints.subList(0, i), ints.subList(i + 1, ints.size())));
-      }
+    public static int sequence(int[] arr) {
+        List<Integer> ints = toList(arr);
+        ints = ints.stream().dropWhile(x -> x <= 0).collect(Collectors.toList());
+        removeNegativeElementsFromEnd(ints);
+        int sum = getSum(ints);
+        for (int i = 0; i < ints.size(); i++) {
+            if (sum - ints.get(i) >= sum) {
+                ints = max(ints, max(ints.subList(0, i), ints.subList(i + 1, ints.size())));
+                sum = getSum(ints);
+            }
+        }
+        return getSum(ints);
     }
-    return ints.toArray(int[]::new);
-  }
 
-  private static List<Integer> max(List<Integer> list1, List<Integer> list2) {
-    return getSum(list1) > getSum(list2) ? list1 : list2;
+    private static List<Integer> max(List<Integer> list1, List<Integer> list2) {
+        return getSum(list1) > getSum(list2) ? list1 : list2;
 
-  }
-
-  private static int getSum(List<Integer> ints) {
-    return ints.stream().mapToInt(x -> x).sum();
-  }
-
-  private static void removeNegativeElementsFromEnd(List<Integer> list) {
-    for (int i = list.size() - 1; list.size() > 0; i++) {
-      if (list.get(i) <= 0) {
-        list.remove(i);
-      }
     }
-  }
 
-  private static List<Integer> toList(int[] arr) {
-    return Arrays.stream(arr).boxed().collect(Collectors.toList());
-  }
+    private static int getSum(List<Integer> ints) {
+        return ints.stream().mapToInt(x -> x).sum();
+    }
+
+    private static void removeNegativeElementsFromEnd(List<Integer> list) {
+        for (int i = list.size() - 1; i >= 0 && list.get(i) <= 0; i--) {
+            list.remove(i);
+        }
+    }
+
+    private static List<Integer> toList(int[] arr) {
+        return Arrays.stream(arr).boxed().collect(Collectors.toList());
+    }
 }
