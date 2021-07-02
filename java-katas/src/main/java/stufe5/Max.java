@@ -13,40 +13,60 @@ package stufe5;
  * valid sublist/subarray.
  */
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 
 public class Max {
 
     public static int sequence(int[] arr) {
         List<Integer> ints = toList(arr);
-        ints = ints.stream().dropWhile(x -> x <= 0).collect(Collectors.toList());
-        removeNegativeElementsFromEnd(ints);
-        int sum = getSum(ints);
+        ints = removeNegativesFromStartAndEnd(ints);
+        final List<Integer> possibleValues = new ArrayList<>();
+        int sum = 0;
+        boolean lastElementWasPos = false;
         for (int i = 0; i < ints.size(); i++) {
-            if (sum - ints.get(i) >= sum) {
-                ints = max(ints, max(ints.subList(0, i), ints.subList(i + 1, ints.size())));
-                sum = getSum(ints);
+            if (ints.get(i) < 0 && lastElementWasPos) {
+                possibleValues.add(sum);
+                int nextSequenceSum = sequence(subArray(ints, i));
+                possibleValues.add(nextSequenceSum);
+                lastElementWasPos = false;
+            } else {
+                lastElementWasPos = true;
             }
+            sum += ints.get(i);
         }
-        return getSum(ints);
+        possibleValues.add(sum);
+        return possibleValues.stream().max(Integer::compare).orElseGet(() -> 0);
     }
 
-    private static List<Integer> max(List<Integer> list1, List<Integer> list2) {
-        return getSum(list1) > getSum(list2) ? list1 : list2;
-
+    private static int[] subArray(List<Integer> ints, int i) {
+        return intListToArray(ints.subList(i, ints.size()));
     }
 
-    private static int getSum(List<Integer> ints) {
-        return ints.stream().mapToInt(x -> x).sum();
+    private static List<Integer> removeNegativesFromStartAndEnd(List<Integer> ints) {
+        ints = removeNegativesFromStart(ints);
+        ints = removeNegativesFromEnd(ints);
+        return ints;
     }
 
-    private static void removeNegativeElementsFromEnd(List<Integer> list) {
+    private static List<Integer> removeNegativesFromStart(List<Integer> ints) {
+        return ints.stream().dropWhile(x -> x <= 0).collect(Collectors.toList());
+    }
+
+    private static List<Integer> removeNegativesFromEnd(List<Integer> list) {
         for (int i = list.size() - 1; i >= 0 && list.get(i) <= 0; i--) {
             list.remove(i);
         }
+        return list;
+    }
+
+
+    private static int[] intListToArray(List<Integer> list) {
+        return list.stream().mapToInt(x -> x).toArray();
     }
 
     private static List<Integer> toList(int[] arr) {
