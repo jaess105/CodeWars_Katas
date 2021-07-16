@@ -13,5 +13,7 @@ endif::[]
 
 //änderung
 
+https://www.codewars.com/users/jaess105/badges/large
+
 Katas von der Seite Code Wars: https://www.codewars.com +
 https://www.codewars.com/users/jaess105[Mein Acc]
