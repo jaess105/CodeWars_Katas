@@ -28,7 +28,7 @@ public class Max {
         ints = max(ints, max(ints.subList(0, i), ints.subList(i + 1, ints.size())));
       }
     }
-    return ints.toArray(int[]::new);
+    return 0;
   }
 
   private static List<Integer> max(List<Integer> list1, List<Integer> list2) {
