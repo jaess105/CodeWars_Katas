@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="stufe4.pathfinder.SolutionTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-07-22T14:55:42" hostname="JANNIKS-TABC" time="0.033">
+  <properties/>
+  <testcase name="myTest()" classname="stufe4.pathfinder.SolutionTest" time="0.026"/>
+  <testcase name="testa()" classname="stufe4.pathfinder.SolutionTest" time="0.001"/>
+  <testcase name="testb()" classname="stufe4.pathfinder.SolutionTest" time="0.001"/>
+  <testcase name="testc()" classname="stufe4.pathfinder.SolutionTest" time="0.001"/>
+  <testcase name="testd()" classname="stufe4.pathfinder.SolutionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
