@@ -20,11 +20,11 @@ public class Finder {
   }
 
   /**
-   * V stands for visited.
-   * @param map
-   * @param x
-   * @param y
-   * @return
+   * Rekursivly calling itself with all neigbours positions, if the current position is not a Wall or has already been visited.
+   * @param map the map as chars
+   * @param x position currently visitung.
+   * @param y position currently visiting.
+   * @return true if the goal is reachable from the current position and the pos has not been visited yet.
    */
   private static boolean pathFinder(char[][] map, int x, int y) {
     int endX = map.length - 1;
@@ -38,9 +38,9 @@ public class Finder {
     } else {
       map[x][y] = 'V';
       return pathFinder(map, x + 1, y) ||
-          pathFinder(map, x, y + 1) ||
-          pathFinder(map, x - 1, y) ||
-          pathFinder(map, x, y - 1);
+             pathFinder(map, x, y + 1) ||
+             pathFinder(map, x - 1, y) ||
+             pathFinder(map, x, y - 1);
     }
   }
 }
