@@ -1,6 +1,7 @@
 package stufe4.pathfinder;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 /**
  * https://www.codewars.com/kata/5765870e190b1472ec0022a2 Task You are at position [0, 0] in maze
@@ -12,23 +13,28 @@ import java.util.Arrays;
  */
 public class Finder {
 
+  private static int goalReachedIn = Integer.MAX_VALUE;
 
   public static int shortestPathFinder(String mapStr) {
-    return shortestPathFinder(toMap(mapStr), 0, 0, 0);
+    return shortestPathFinder(toIntMap(mapStr), 0, 0, 0);
   }
 
-  public static int shortestPathFinder(char[][] map, int x, int y, int pathLength) {
+  public static int shortestPathFinder(int[][] map, int x, int y, int pathLength) {
     int endX = map.length - 1;
     int endY = map[0].length - 1;
-    if (x > endX || y > endY || x < 0 || y < 0) {
-      return -1;
-    } else if (x == endX && y == endY) {
+    boolean fastest = goalReachedIn > pathLength && pathLength != -1;
+    if (x == endX && y == endY) {
+      if (fastest){
+        goalReachedIn = pathLength;
+      }
       return pathLength;
-    } else if (map[x][y] == 'W' || map[x][y] == 'V') {
+    } else if (x > endX || y > endY || x < 0 || y < 0
+        || map[x][y] <= pathLength
+        || !fastest) {
       return -1;
     } else {
-      map[x][y] = 'V';
       pathLength++;
+      map[x][y] = pathLength;
       return min(
           shortestPathFinder(map, x + 1, y, pathLength),
           shortestPathFinder(map, x, y + 1, pathLength),
@@ -41,6 +47,16 @@ public class Finder {
 
   private static int min(int... args) {
     return Arrays.stream(args).filter(x -> x != -1).min().orElse(-1);
+  }
+
+  private static int[][] toIntMap(String a) {
+    int maxValue = Integer.MAX_VALUE;
+    return Arrays.stream(a.split("\n"))
+        .map(String::toCharArray)
+        .map(arr -> IntStream.range(0, arr.length)
+            .map(x -> arr[x] == 'W' ? -1 : maxValue)
+            .toArray())
+        .toArray(int[][]::new);
   }
 
   private static char[][] toMap(String a) {
