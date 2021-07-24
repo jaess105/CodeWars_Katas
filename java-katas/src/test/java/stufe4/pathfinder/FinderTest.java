@@ -62,7 +62,7 @@ class SolutionTest {
     String a = ".W.\n" +
         ".W.\n" +
         "...";
-    assertEquals(4, Finder.shortestPathFinder(a));
+    assertEquals(4, Finder.findShortestPath(a));
   }
 
   @Test
@@ -70,7 +70,7 @@ class SolutionTest {
     String b = ".W.\n" +
         ".W.\n" +
         "W..";
-    assertEquals(-1, Finder.shortestPathFinder(b));
+    assertEquals(-1, Finder.findShortestPath(b));
   }
 
   @Test
@@ -82,7 +82,7 @@ class SolutionTest {
         "......\n" +
         "......";
 
-    assertEquals(10, Finder.shortestPathFinder(c));
+    assertEquals(10, Finder.findShortestPath(c));
   }
 
   @Test
@@ -94,7 +94,7 @@ class SolutionTest {
         ".....W\n" +
         "....W.";
 
-    assertEquals(-1, Finder.shortestPathFinder(d));
+    assertEquals(-1, Finder.findShortestPath(d));
   }
 
 }

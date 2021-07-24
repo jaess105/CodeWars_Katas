@@ -1,6 +1,7 @@
 package stufe4.pathfinder;
 
 import java.util.Arrays;
+import java.util.function.Predicate;
 import java.util.stream.IntStream;
 
 /**
@@ -13,33 +14,35 @@ import java.util.stream.IntStream;
  */
 public class Finder {
 
-  private static int goalReachedIn = Integer.MAX_VALUE;
+  private int goalReachedIn = Integer.MAX_VALUE;
 
-  public static int shortestPathFinder(String mapStr) {
-    return shortestPathFinder(toIntMap(mapStr), 0, 0, 0);
+  public static int findShortestPath(String mapStr) {
+    Finder finder = new Finder();
+    return finder.findShortestPath(toIntMap(mapStr), 0, 0, 0);
   }
 
-  public static int shortestPathFinder(int[][] map, int x, int y, int pathLength) {
+  public  int findShortestPath(int[][] map, int x, int y, int pathLength) {
     int endX = map.length - 1;
     int endY = map[0].length - 1;
-    boolean fastest = goalReachedIn > pathLength && pathLength != -1;
+    Predicate<Integer> fastest = (integer) -> goalReachedIn > integer && integer != -1;
     if (x == endX && y == endY) {
-      if (fastest){
+      if (fastest.test(pathLength)){
         goalReachedIn = pathLength;
       }
       return pathLength;
-    } else if (x > endX || y > endY || x < 0 || y < 0
+    }
+    pathLength++;
+    if (x > endX || y > endY || x < 0 || y < 0
         || map[x][y] <= pathLength
-        || !fastest) {
+        || !fastest.test(pathLength)) {
       return -1;
     } else {
-      pathLength++;
       map[x][y] = pathLength;
       return min(
-          shortestPathFinder(map, x + 1, y, pathLength),
-          shortestPathFinder(map, x, y + 1, pathLength),
-          shortestPathFinder(map, x - 1, y, pathLength),
-          shortestPathFinder(map, x, y - 1, pathLength)
+          findShortestPath(map, x + 1, y, pathLength),
+          findShortestPath(map, x, y + 1, pathLength),
+          findShortestPath(map, x - 1, y, pathLength),
+          findShortestPath(map, x, y - 1, pathLength)
       );
     }
   }
