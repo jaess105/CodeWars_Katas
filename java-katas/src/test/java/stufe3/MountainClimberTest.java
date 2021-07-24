@@ -1,10 +1,11 @@
-package stufe4.pathfinder;
+package stufe3;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+import stufe3.Finder;
 
-class MountainClimberTest {
+class FinderTest {
 
 
   @Test
@@ -13,7 +14,7 @@ class MountainClimberTest {
         "000\n" +
         "000";
 
-    assertEquals(0, MountainClimber.pathFinder(a));
+    assertEquals(0, Finder.pathFinder(a));
   }
 
   @Test
@@ -22,7 +23,7 @@ class MountainClimberTest {
         "010\n" +
         "010";
 
-    assertEquals(2, MountainClimber.pathFinder(b));
+    assertEquals(2, Finder.pathFinder(b));
 
   }
 
@@ -32,7 +33,7 @@ class MountainClimberTest {
         "101\n" +
         "010";
 
-    assertEquals(4, MountainClimber.pathFinder(c));
+    assertEquals(4, Finder.pathFinder(c));
 
   }
 
@@ -43,7 +44,7 @@ class MountainClimberTest {
         "0707\n" +
         "7070";
 
-    assertEquals(42, MountainClimber.pathFinder(d));
+    assertEquals(42, Finder.pathFinder(d));
 
   }
 
@@ -56,7 +57,7 @@ class MountainClimberTest {
         "077770\n" +
         "000007";
 
-    assertEquals(14, MountainClimber.pathFinder(e));
+    assertEquals(14, Finder.pathFinder(e));
 
   }
 
@@ -69,7 +70,7 @@ class MountainClimberTest {
         "007000\n" +
         "007777";
 
-    assertEquals(0, MountainClimber.pathFinder(f));
+    assertEquals(0, Finder.pathFinder(f));
   }
 
   @Test
@@ -81,7 +82,7 @@ class MountainClimberTest {
         "000010\n" +
         "000109\n" +
         "001010";
-    assertEquals(4, MountainClimber.pathFinder(g));
+    assertEquals(4, Finder.pathFinder(g));
   }
 
 }
