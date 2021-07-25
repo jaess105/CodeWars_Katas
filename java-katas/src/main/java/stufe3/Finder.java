@@ -29,7 +29,14 @@ public class Finder {
     END_Y = map[0].length - 1;
   }
 
-
+  /**
+   * A* klingt wie eine gute Idee. Ansonsten könnte man noch einen Algo schreiben, der immer den
+   * Knoten mit der geringsten Heuristik erweitert. Also eine Art Branch and Bound. Klingt
+   * sinnvoll.
+   *
+   * @param maze
+   * @return
+   */
   static int pathFinder(String maze) {
     final int[][] map = toMap(maze);
     Finder finder = new Finder(map);
@@ -66,22 +73,25 @@ public class Finder {
   }
 
   private static int min(int... args) {
-    return Arrays.stream(args).filter(x -> x != -1).min().orElse(-1);
+    return Arrays.stream(args).parallel()
+        .filter(x -> x != -1)
+        .min()
+        .orElse(-1);
   }
 
   private static int[][] toInfiniteMap(int[][] map) {
     int maxValue = Integer.MAX_VALUE;
-    return Arrays.stream(map).map(
-        arr -> IntStream.range(0, arr.length)
+    return Arrays.stream(map).parallel()
+        .map(arr -> IntStream.range(0, arr.length).parallel()
             .map(x -> maxValue)
             .toArray())
         .toArray(int[][]::new);
   }
 
   private static int[][] toMap(String a) {
-    return Arrays.stream(a.split("\n"))
+    return Arrays.stream(a.split("\n")).parallel()
         .map(String::toCharArray)
-        .map(x -> IntStream.range(0, x.length)
+        .map(x -> IntStream.range(0, x.length).parallel()
             .map(i -> Character.getNumericValue(x[i]))
             .toArray())
         .toArray(int[][]::new);
