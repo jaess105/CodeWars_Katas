@@ -1,8 +1,8 @@
 package stufe3;
 
 import static java.lang.Math.abs;
+import static java.util.Arrays.stream;
 
-import java.util.Arrays;
 import java.util.stream.IntStream;
 
 /**
@@ -73,7 +73,7 @@ public class Finder {
   }
 
   private static int min(int... args) {
-    return Arrays.stream(args).parallel()
+    return stream(args).parallel()
         .filter(x -> x != -1)
         .min()
         .orElse(-1);
@@ -81,17 +81,20 @@ public class Finder {
 
   private static int[][] toInfiniteMap(int[][] map) {
     int maxValue = Integer.MAX_VALUE;
-    return Arrays.stream(map).parallel()
-        .map(arr -> IntStream.range(0, arr.length).parallel()
+    return stream(map).parallel()
+        .map(arr -> IntStream.range(0, arr.length)
+            .parallel()
             .map(x -> maxValue)
             .toArray())
         .toArray(int[][]::new);
   }
 
   private static int[][] toMap(String a) {
-    return Arrays.stream(a.split("\n")).parallel()
+    return stream(a.split("\n"))
+        .parallel()
         .map(String::toCharArray)
-        .map(x -> IntStream.range(0, x.length).parallel()
+        .map(x -> IntStream.range(0, x.length)
+            .parallel()
             .map(i -> Character.getNumericValue(x[i]))
             .toArray())
         .toArray(int[][]::new);
