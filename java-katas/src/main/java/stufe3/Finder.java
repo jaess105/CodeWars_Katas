@@ -3,6 +3,7 @@ package stufe3;
 import static java.lang.Math.abs;
 import static java.util.Arrays.stream;
 
+import java.util.Set;
 import java.util.stream.IntStream;
 
 /**
@@ -40,7 +41,52 @@ public class Finder {
   static int pathFinder(String maze) {
     final int[][] map = toMap(maze);
     Finder finder = new Finder(map);
-    return finder.smallestDiff(0, 0, map[0][0], 0);
+    return finder.barnchAndBound(0, 0, map[0][0], 0);
+    //return finder.smallestDiff(0, 0, map[0][0], 0);
+  }
+
+  private enum direction {
+    NORTH, WEST, SOUTH, EAST;
+  }
+
+  private class Node {
+
+    private final int x;
+    private final int y;
+    private final int value;
+
+    public Node(int x, int y, int value) {
+      this.x = x;
+      this.y = y;
+      this.value = value;
+    }
+  }
+
+  private int barnchAndBound(int x, int y, int current, int climbs) {
+
+    for (int x_ = -1; x_ <= 1; x_ += 2) {
+      for (int y_ = -1; y_ <= 1; y_ += 2) {
+        map[x + x_][y + y_];
+            
+      }
+    }
+    climbs += abs(current - prev);
+    if (x == END_X && y == END_Y) {
+      if (climbs < fastestAtEnd) {
+        fastestAtEnd = climbs;
+      }
+      return climbs;
+    } else if (visited[x][y] > climbs && fastestAtEnd > climbs) {
+      visited[x][y] = climbs;
+      return min(
+          smallestDiff(x + 1, y, current, climbs),
+          smallestDiff(x, y + 1, current, climbs),
+          smallestDiff(x - 1, y, current, climbs),
+          smallestDiff(x, y - 1, current, climbs)
+      );
+    } else {
+      return -1;
+    }
   }
 
   private int smallestDiff(int x, int y, int prev, int climbs) {
