@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Katas", "Katas\Katas.csproj", "{592A1B0B-C254-4497-AAEC-D9A162E0C079}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{A27F16CB-B00A-4FA2-A5F5-5BFE9D187AFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{592A1B0B-C254-4497-AAEC-D9A162E0C079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{592A1B0B-C254-4497-AAEC-D9A162E0C079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{592A1B0B-C254-4497-AAEC-D9A162E0C079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{592A1B0B-C254-4497-AAEC-D9A162E0C079}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A27F16CB-B00A-4FA2-A5F5-5BFE9D187AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A27F16CB-B00A-4FA2-A5F5-5BFE9D187AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A27F16CB-B00A-4FA2-A5F5-5BFE9D187AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A27F16CB-B00A-4FA2-A5F5-5BFE9D187AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
