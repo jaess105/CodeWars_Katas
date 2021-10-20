@@ -138,16 +138,17 @@
   )
 
 (defn race [v1 v2 g]
-  (defn get-hour [x](int x) )
-  (defn get-min [x](int (* x 60))  )
-  (defn get-sec [x] (int (* (* x 60) 60)))  
-  (
-   (->> (float (/ g (- v2 v1)))
-        (into [])
-        (apply (fn [x] (get-hour x) (get-min x) (get-sec x)))
-        )
-   
-  ))
+  (if (or (>= v1 v2)  (= g 0)) nil
+      (let [get-hour (fn [x] (int x))
+            get-min (fn [x] (int (mod (* x 60) 60)))
+            get-sec (fn [x] (int (mod (* (* x 60) 60) 60)))
+            distance_ (/ g (- v2 v1))
+            hour (get-hour distance_)
+            min (get-min distance_)
+            sec (get-sec distance_)]
+        [hour min sec])))
+
+
 
 
 (race 720 850 70
@@ -163,14 +164,11 @@
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
-<<<<<<< HEAD
   ;(row-sum-odd-numbers 5)
   (row-sum-odd-numbers 5))
-=======
   (def s1 ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"])
   (def s2 ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"])
-  (mxdiflg s1, s2))
+  (mxdiflg s1, s2)
 
->>>>>>> dda36185d8e0213bd4a06bfef221e268fdf5779a
 
 
