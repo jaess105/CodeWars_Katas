@@ -1,3 +1,6 @@
+.lsp
+.clj-kondo
+.calva
 c++-katas
 .idea
 .env
