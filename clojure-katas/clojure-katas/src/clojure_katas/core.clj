@@ -94,6 +94,30 @@
   ergebnis
   )
 
+(defn solution [n]
+  "https://www.codewars.com/kata/5174a4c0f2769dd8b1000003/train/clojure"
+  (sort n)
+  )
+
+(defn race [v1 v2 g]
+  (defn get-hour [x](int x) )
+  (defn get-min [x](int (* x 60))  )
+  (defn get-sec [x] (int (* (* x 60) 60)))  
+  (
+   (->> (float (/ g (- v2 v1)))
+        (into [])
+        (apply (fn [x] (get-hour x) (get-min x) (get-sec x)))
+        )
+   
+  ))
+
+
+(race 720 850 70
+      )
+
+(= (race 720 850 70) [0 32 18])
+
+
 
 (defn -main
   "I don't do a whole lot ... yet."
