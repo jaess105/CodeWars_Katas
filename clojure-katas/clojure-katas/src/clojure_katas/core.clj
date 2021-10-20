@@ -5,7 +5,7 @@
 
 (defn row-sum-odd-numbers [row-num]
   ;; https://www.codewars.com/kata/55fd2d567d94ac3bc9000064/train/clojure
-  (reduce + 
+  (reduce +
           (take-last row-num
                      (take
                       (reduce + (range 0 (+ row-num 1)))
@@ -23,9 +23,9 @@
 (defn sum-till-n [n] (/ (* n (+ n 1)) 2))
 
 (defn row-sum-odd-numbers [row-num]
-  (def numbers-before (->> (- row-num 1) 
-       (sum-till-n)
-       (+ 1)))
+  (def numbers-before (->> (- row-num 1)
+                           (sum-till-n)
+                           (+ 1)))
   (->>
    (range numbers-before (+ numbers-before row-num))
    (map nth-odd-number)
@@ -41,9 +41,8 @@
     (- n 1)
     (sum-till-n n)
     (- (Math/pow (+ n row-num) 2)
-     (Math/pow n 2))
-    (long n)
-    ))
+       (Math/pow n 2))
+    (long n)))
 
 (defn arr [n]
   ;;https://www.codewars.com/kata/571d42206414b103dc0006a1/solutions/clojure
@@ -53,8 +52,8 @@
 (defn get-sum [a b]
   ;;https://www.codewars.com/kata/55f2b110f61eb01779000053/train/clojure
   ;Your code here!
-  (->> 
-   (if (< a b) (range a (+ b 1)) (range b (+ a 1)) )
+  (->>
+   (if (< a b) (range a (+ b 1)) (range b (+ a 1)))
    (reduce +))
 
   (->>
@@ -103,42 +102,39 @@
 
 
 (defn str-to-length [ls]
-  (map (fn [x] (count x)) 
+  (map (fn [x] (count x))
        ls))
 
 (defn mxdiflg [a1 a2]
   ;;https://www.codewars.com/kata/5663f5305102699bad000056/train/clojure
   (->> (for [a (str-to-length a1)
-            b (str-to-length a2)] (- a b))
+             b (str-to-length a2)] (- a b))
        (into [])
        (map #(Math/abs %))
-       (reduce max -1))
-  )
+       (reduce max -1)))
 
 
 (defn declare-winner [f1 f2]
   ;;FIXME
   ;;https://www.codewars.com/kata/577bd8d4ae2807c64b00045b/train/clojure
   (println (format "%s a: %d hp: %d %s a: %d hp: %d. Kampf Ergebniss => %f %f"
-           (:name f1) (:attack f1) (:hp f1)
-           (:name f2) (:attack f2) (:hp f2)
-           (float (/ (:hp f1) (:attack f2))) 
-           (float (/ (:hp f2) (:attack f1)))))
+                   (:name f1) (:attack f1) (:hp f1)
+                   (:name f2) (:attack f2) (:hp f2)
+                   (float (/ (:hp f1) (:attack f2)))
+                   (float (/ (:hp f2) (:attack f1)))))
   (def ergebnis
-  (if (> (+ 0.5 (/ (:hp f1) (:attack f2))) (/ (:hp f2) (:attack f1)))
-    (:name f1)
-    (:name f2)))
+    (if (> (+ 0.5 (/ (:hp f1) (:attack f2))) (/ (:hp f2) (:attack f1)))
+      (:name f1)
+      (:name f2)))
   (println ergebnis)
-  ergebnis
-  )
+  ergebnis)
 
 (defn solution [n]
   "https://www.codewars.com/kata/5174a4c0f2769dd8b1000003/train/clojure"
-  (sort n)
-  )
+  (sort n))
 
 (defn race [v1 v2 g]
-  (if (or (>= v1 v2)  (= g 0)) nil
+  (if (or (>= v1 v2) (= g 0)) nil
       (let [get-hour (fn [x] (int x))
             get-min (fn [x] (int (mod (* x 60) 60)))
             get-sec (fn [x] (int (mod (* (* x 60) 60) 60)))
@@ -151,10 +147,7 @@
 
 
 
-(race 720 850 70
-      )
 
-(= (race 720 850 70) [0 32 18])
 
 
 
@@ -166,9 +159,9 @@
   [& args]
   ;(row-sum-odd-numbers 5)
   (row-sum-odd-numbers 5))
-  (def s1 ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"])
-  (def s2 ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"])
-  (mxdiflg s1, s2)
+(def s1 ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"])
+(def s2 ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"])
+(mxdiflg s1, s2)
 
 
 

@@ -204,3 +204,29 @@ clj꞉clojure-katas.core꞉> 
 clj꞉clojure-katas.core꞉> 
 [0 32 18]
 clj꞉clojure-katas.core꞉> 
+; Syntax error macroexpanding clojure.core/defn at (c:\Users\Jannik\Projekte\prog-stuff\cmop-prog\CodeWars_Katas\clojure-katas\clojure-katas\src\clojure_katas\core.clj:152:1).
+; let - failed: vector? at: [:fn-tail :arity-n :bodies :params] spec: :clojure.core.specs.alpha/param-list
+(let [stuff (fn [x] (println x))] (stuff "Hello World")) - failed: vector? at: [:fn-tail :arity-1 :params] spec: :clojure.core.specs.alpha/param-list
+clj꞉clojure-katas.core꞉> 
+#'clojure-katas.core/dostuff
+clj꞉clojure-katas.core꞉> 
+Hello World
+nil
+clj꞉clojure-katas.core꞉> 
+#'clojure-katas.core/dostuff
+clj꞉clojure-katas.core꞉> 
+(defn dostuff []
+  (let [func (fn [x] (println x))
+        another-func (fn [x] (+ x 1))
+        some-var "Hello"]
+    (func "Hello World")
+    (println (another-func 5))
+    (println some-var)))
+clj꞉clojure-katas.core꞉> 
+#'clojure-katas.core/dostuff
+clj꞉clojure-katas.core꞉> 
+Hello World
+6
+Hello
+nil
+clj꞉clojure-katas.core꞉> 
