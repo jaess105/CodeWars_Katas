@@ -144,7 +144,26 @@
             sec (get-sec distance_)]
         [hour min sec])))
 
+"More generally given parameters:
 
+p0, percent, aug (inhabitants coming or leaving each year), p (population to surpass)
+
+the function nb_year should return n number of entire years needed to get a population greater or equal to p.
+
+aug is an integer, percent a positive or null floating number, p0 and p are positive integers (> 0)"
+
+(defn nb-year [p0 percent aug p]
+  ;; https://www.codewars.com/kata/563b662a59afc2b5120000c6/train/clojure
+  (def my-seq (lazy-cat [p0] (map new-population my-seq)))
+  (let [new-population (fn [x] (+ (+ x (* x percent )) p))]
+    (find my-seq (fn [x] (>= x aug)))
+    )
+  )
+
+(take 10 (nb-year 1500, 5, 100, 5000)
+      )
+
+(= (nb-year 1500, 5, 100, 5000), 15)
 
 
 
