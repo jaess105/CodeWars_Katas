@@ -18,25 +18,54 @@
 clj꞉clojure-katas.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉clojure-katas.core꞉> 
-#'clojure-katas.core/nb-year
-clj꞉clojure-katas.core꞉> 
-#'clojure-katas.core/nb-year
-clj꞉clojure-katas.core꞉> 
-; Execution error (IllegalArgumentException) at clojure-katas.core/nb-year (form-init2750532464776949970.clj:160).
-; find not supported on type: clojure.lang.LazySeq
-clj꞉clojure-katas.core꞉> 
-; Execution error (IllegalArgumentException) at clojure-katas.core/nb-year (form-init2750532464776949970.clj:160).
-; find not supported on type: clojure.lang.LazySeq
-clj꞉clojure-katas.core꞉> 
-; Execution error (IllegalArgumentException) at clojure-katas.core/nb-year (form-init2750532464776949970.clj:160).
-; find not supported on type: clojure.lang.LazySeq
-clj꞉clojure-katas.core꞉> 
-; Execution error (IllegalArgumentException) at clojure-katas.core/nb-year (form-init2750532464776949970.clj:160).
-; find not supported on type: clojure.lang.LazySeq
-clj꞉clojure-katas.core꞉> 
-; Syntax error compiling at (src/clojure_katas/core.clj:157:30).
-; Unable to resolve symbol: new-population in this context
-clj꞉clojure-katas.core꞉> 
-; Syntax error compiling at (src/clojure_katas/core.clj:157:30).
-; Unable to resolve symbol: new-population in this context
-clj꞉clojure-katas.core꞉> 
+; Syntax error reading source at (REPL:10:47).
+; Invalid number: 1:
+clj꞉clojure-katas.7-kyu.Testing-1-2-3꞉> 
+nil
+clj꞉clojure-katas.7-kyu.Testing-1-2-3꞉> 
+#'clojure-katas.7-kyu.Testing-1-2-3/number
+clj꞉clojure-katas.7-kyu.Testing-1-2-3꞉> 
+#'clojure-katas.7-kyu.Testing-1-2-3/number
+clj꞉clojure-katas.7-kyu.Testing-1-2-3꞉> 
+; Syntax error macroexpanding clojure.core/let at (src/clojure_katas/7-kyu/Testing-1-2-3.clj:15:3).
+; [line-formatting (fn* [p1__7607# p2__7606#] (format "%d: %s" p2__7606# p1__7607#)) line-numbers] - failed: even-number-of-forms? at: [:bindings] spec: :clojure.core.specs.alpha/bindings
+clj꞉clojure-katas.7-kyu.Testing-1-2-3꞉> 
+; Syntax error macroexpanding clojure.core/let at (src/clojure_katas/7-kyu/Testing-1-2-3.clj:15:3).
+; [line-formatting (fn* [p1__7636# p2__7637#] (format "%d: %s" p1__7636# p2__7637#)) line-numbers] - failed: even-number-of-forms? at: [:bindings] spec: :clojure.core.specs.alpha/bindings
+clj꞉clojure-katas.7-kyu.Testing-1-2-3꞉> 
+; Syntax error macroexpanding clojure.core/let at (src/clojure_katas/7-kyu/Testing-1-2-3.clj:15:3).
+; [line-formatting (fn [i line] (format "%d: %s" i line)) line-numbers] - failed: even-number-of-forms? at: [:bindings] spec: :clojure.core.specs.alpha/bindings
+clj꞉clojure-katas.7-kyu.Testing-1-2-3꞉> 
+#'clojure-katas.7-kyu.Testing-1-2-3/number
+clj꞉clojure-katas.7-kyu.Testing-1-2-3꞉> 
+#'clojure-katas.7-kyu.Testing-1-2-3/number
+clj꞉clojure-katas.7-kyu.Testing-1-2-3꞉> 
+; Execution error (FileNotFoundException) at clojure-katas.6-kyu.sumdigpow/eval7732 (form-init3136161416486711272.clj:2).
+; Could not locate clojure/contrib/math__init.class, clojure/contrib/math.clj or clojure/contrib/math.cljc on classpath.
+clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
+; Syntax error macroexpanding clojure.core/ns at (src/clojure_katas/6-kyu/sumdigpow.clj:1:1).
+; ((require (quote clojure.contrib.math))) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
+; Execution error (FileNotFoundException) at clojure-katas.6-kyu.sumdigpow/eval7734 (form-init3136161416486711272.clj:3).
+; Could not locate clojure/contrib/math__init.class, clojure/contrib/math.clj or clojure/contrib/math.cljc on classpath.
+clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
+nil
+clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
+; Syntax error compiling at (src/clojure_katas/6-kyu/sumdigpow.clj:34:18).
+; No such namespace: math
+clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
+; Syntax error compiling at (src/clojure_katas/6-kyu/sumdigpow.clj:34:18).
+; No such namespace: math
+clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
+; Execution error (FileNotFoundException) at clojure-katas.6-kyu.sumdigpow/eval7774 (form-init3136161416486711272.clj:3).
+; Could not locate clojure/contrib/math__init.class, clojure/contrib/math.clj or clojure/contrib/math.cljc on classpath.
+clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
+; Execution error (FileNotFoundException) at clojure-katas.6-kyu.sumdigpow/eval7776 (form-init3136161416486711272.clj:3).
+; Could not locate clojure/contrib/math__init.class, clojure/contrib/math.clj or clojure/contrib/math.cljc on classpath.
+clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
+; Execution error (FileNotFoundException) at clojure-katas.6-kyu.sumdigpow/eval7780$loading (form-init3136161416486711272.clj:1).
+; Could not locate clojure/math/numeric_tower__init.class, clojure/math/numeric_tower.clj or clojure/math/numeric_tower.cljc on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.
+clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
+; Execution error (FileNotFoundException) at clojure-katas.6-kyu.sumdigpow/eval7786$loading (form-init3136161416486711272.clj:1).
+; Could not locate clojure/math/numeric_tower__init.class, clojure/math/numeric_tower.clj or clojure/math/numeric_tower.cljc on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.
+clj꞉clojure-katas.6-kyu.sumdigpow꞉> 

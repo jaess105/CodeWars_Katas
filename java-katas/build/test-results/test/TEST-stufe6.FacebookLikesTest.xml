@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="stufe6.FacebookLikesTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-11-30T06:31:27" hostname="Janniks-PC" time="0.029">
+  <properties/>
+  <testcase name="test1()" classname="stufe6.FacebookLikesTest" time="0.021"/>
+  <testcase name="test2()" classname="stufe6.FacebookLikesTest" time="0.001"/>
+  <testcase name="test3()" classname="stufe6.FacebookLikesTest" time="0.001"/>
+  <testcase name="test4()" classname="stufe6.FacebookLikesTest" time="0.001"/>
+  <testcase name="staticTests()" classname="stufe6.FacebookLikesTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

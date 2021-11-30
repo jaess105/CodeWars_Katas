@@ -1,3 +1,4 @@
+
 package stufe3;
 
 import static java.lang.Math.abs;
@@ -13,9 +14,16 @@ import java.util.stream.IntStream;
  * (ascending or descending).
  * <p>
  * Location altitude is defined as an integer number (0-9).
- */
-public class Finder {
-
+ * <p>
+ * A* klingt wie eine gute Idee. Ansonsten könnte man noch einen Algo schreiben, der immer den
+ * Knoten mit der geringsten Heuristik erweitert. Also eine Art Branch and Bound. Klingt sinnvoll.
+ *
+ * @param maze
+ * @return
+ *//*
+*/
+public class FinderBruteForce {
+/*
   private final int[][] map;
   private final int[][] visited;
   private final int END_X;
@@ -29,14 +37,16 @@ public class Finder {
     END_Y = map[0].length - 1;
   }
 
-  /**
-   * A* klingt wie eine gute Idee. Ansonsten könnte man noch einen Algo schreiben, der immer den
-   * Knoten mit der geringsten Heuristik erweitert. Also eine Art Branch and Bound. Klingt
-   * sinnvoll.
-   *
-   * @param maze
-   * @return
-   */
+  */
+/**
+ * A* klingt wie eine gute Idee. Ansonsten könnte man noch einen Algo schreiben, der immer den
+ * Knoten mit der geringsten Heuristik erweitert. Also eine Art Branch and Bound. Klingt
+ * sinnvoll.
+ *
+ * @param maze
+ * @return
+ *//*
+
   static int pathFinder(String maze) {
     final int[][] map = toMap(maze);
     Finder finder = new Finder(map);
@@ -44,9 +54,11 @@ public class Finder {
   }
 
   private int smallestDiff(int x, int y, int prev, int climbs) {
-    /*if (x > END_X || y > END_Y || x < 0 || y < 0) {
+    */
+/*if (x > END_X || y > END_Y || x < 0 || y < 0) {
       return -1;
-    }*/
+    }*//*
+
     final int current;
     try {
       current = map[x][y];
@@ -95,5 +107,6 @@ public class Finder {
             .map(i -> Character.getNumericValue(x[i]))
             .toArray())
         .toArray(int[][]::new);
-  }
+  }*/
 }
+
