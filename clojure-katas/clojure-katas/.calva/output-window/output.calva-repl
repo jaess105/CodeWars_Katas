@@ -5,7 +5,7 @@
 ; Happy coding! ♥️
 
 ; Jacking in...
-; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.8.3"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.26.0"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"0.8.3"] -- update-in :plugins conj [cider/cider-nrepl,"0.26.0"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless
 ; Hooking up nREPL sessions...
 ; Connected session: clj
 ; TIPS: 
@@ -18,54 +18,83 @@
 clj꞉clojure-katas.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉clojure-katas.core꞉> 
-; Syntax error reading source at (REPL:10:47).
-; Invalid number: 1:
-clj꞉clojure-katas.7-kyu.Testing-1-2-3꞉> 
 nil
-clj꞉clojure-katas.7-kyu.Testing-1-2-3꞉> 
-#'clojure-katas.7-kyu.Testing-1-2-3/number
-clj꞉clojure-katas.7-kyu.Testing-1-2-3꞉> 
-#'clojure-katas.7-kyu.Testing-1-2-3/number
-clj꞉clojure-katas.7-kyu.Testing-1-2-3꞉> 
-; Syntax error macroexpanding clojure.core/let at (src/clojure_katas/7-kyu/Testing-1-2-3.clj:15:3).
-; [line-formatting (fn* [p1__7607# p2__7606#] (format "%d: %s" p2__7606# p1__7607#)) line-numbers] - failed: even-number-of-forms? at: [:bindings] spec: :clojure.core.specs.alpha/bindings
-clj꞉clojure-katas.7-kyu.Testing-1-2-3꞉> 
-; Syntax error macroexpanding clojure.core/let at (src/clojure_katas/7-kyu/Testing-1-2-3.clj:15:3).
-; [line-formatting (fn* [p1__7636# p2__7637#] (format "%d: %s" p1__7636# p2__7637#)) line-numbers] - failed: even-number-of-forms? at: [:bindings] spec: :clojure.core.specs.alpha/bindings
-clj꞉clojure-katas.7-kyu.Testing-1-2-3꞉> 
-; Syntax error macroexpanding clojure.core/let at (src/clojure_katas/7-kyu/Testing-1-2-3.clj:15:3).
-; [line-formatting (fn [i line] (format "%d: %s" i line)) line-numbers] - failed: even-number-of-forms? at: [:bindings] spec: :clojure.core.specs.alpha/bindings
-clj꞉clojure-katas.7-kyu.Testing-1-2-3꞉> 
-#'clojure-katas.7-kyu.Testing-1-2-3/number
-clj꞉clojure-katas.7-kyu.Testing-1-2-3꞉> 
-#'clojure-katas.7-kyu.Testing-1-2-3/number
-clj꞉clojure-katas.7-kyu.Testing-1-2-3꞉> 
-; Execution error (FileNotFoundException) at clojure-katas.6-kyu.sumdigpow/eval7732 (form-init3136161416486711272.clj:2).
-; Could not locate clojure/contrib/math__init.class, clojure/contrib/math.clj or clojure/contrib/math.cljc on classpath.
-clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
-; Syntax error macroexpanding clojure.core/ns at (src/clojure_katas/6-kyu/sumdigpow.clj:1:1).
-; ((require (quote clojure.contrib.math))) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
-clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
-; Execution error (FileNotFoundException) at clojure-katas.6-kyu.sumdigpow/eval7734 (form-init3136161416486711272.clj:3).
-; Could not locate clojure/contrib/math__init.class, clojure/contrib/math.clj or clojure/contrib/math.cljc on classpath.
-clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+; Syntax error compiling at (c:\Users\Jannik\Projekte\prog-stuff\comp-prog\CodeWars_Katas\clojure-katas\clojure-katas\src\clojure_katas\6-kyu\translate-roman-numerals.clj:13:9).
+; Unable to resolve symbol: translate-roman-numerals in this context
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+false
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+; Execution error (ArityException) at clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals (form-init8054424458718019594.clj:9).
+; Wrong number of args (2) passed to: clojure.lang.PersistentVector
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+; Execution error (ArityException) at clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals (form-init8054424458718019594.clj:9).
+; Wrong number of args (2) passed to: clojure.lang.PersistentVector
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+-4
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+[-4]
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+[-4 5]
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
 nil
-clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
-; Syntax error compiling at (src/clojure_katas/6-kyu/sumdigpow.clj:34:18).
-; No such namespace: math
-clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
-; Syntax error compiling at (src/clojure_katas/6-kyu/sumdigpow.clj:34:18).
-; No such namespace: math
-clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
-; Execution error (FileNotFoundException) at clojure-katas.6-kyu.sumdigpow/eval7774 (form-init3136161416486711272.clj:3).
-; Could not locate clojure/contrib/math__init.class, clojure/contrib/math.clj or clojure/contrib/math.cljc on classpath.
-clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
-; Execution error (FileNotFoundException) at clojure-katas.6-kyu.sumdigpow/eval7776 (form-init3136161416486711272.clj:3).
-; Could not locate clojure/contrib/math__init.class, clojure/contrib/math.clj or clojure/contrib/math.cljc on classpath.
-clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
-; Execution error (FileNotFoundException) at clojure-katas.6-kyu.sumdigpow/eval7780$loading (form-init3136161416486711272.clj:1).
-; Could not locate clojure/math/numeric_tower__init.class, clojure/math/numeric_tower.clj or clojure/math/numeric_tower.cljc on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.
-clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
-; Execution error (FileNotFoundException) at clojure-katas.6-kyu.sumdigpow/eval7786$loading (form-init3136161416486711272.clj:1).
-; Could not locate clojure/math/numeric_tower__init.class, clojure/math/numeric_tower.clj or clojure/math/numeric_tower.cljc on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.
-clj꞉clojure-katas.6-kyu.sumdigpow꞉> 
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+; Execution error (NullPointerException) at clojure-katas.6-kyu.translate-roman-numerals/eval7584 (form-init8054424458718019594.clj:22).
+; Cannot invoke "Object.getClass()" because "x" is null
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+; Execution error (ArityException) at clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals (form-init8054424458718019594.clj:9).
+; Wrong number of args (2) passed to: clojure.lang.PersistentVector
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+false
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+false
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+[1]
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+false
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+1
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+-4
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+0
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+-1
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+()
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+; Syntax error compiling at (c:\Users\Jannik\Projekte\prog-stuff\comp-prog\CodeWars_Katas\clojure-katas\clojure-katas\src\clojure_katas\6-kyu\translate-roman-numerals.clj:6:45).
+; Unable to resolve symbol: roman in this context
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+; Execution error (IllegalArgumentException) at clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals (form-init8054424458718019594.clj:7).
+; Don't know how to create ISeq from: java.lang.Long
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+1
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+4
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+; Execution error (ClassCastException) at clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals$fn (form-init8054424458718019594.clj:9).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+true
+clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
