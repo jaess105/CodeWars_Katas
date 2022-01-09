@@ -5,7 +5,7 @@
 ; Happy coding! ♥️
 
 ; Jacking in...
-; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"0.8.3"] -- update-in :plugins conj [cider/cider-nrepl,"0.26.0"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
 ; Hooking up nREPL sessions...
 ; Connected session: clj
 ; TIPS: 
@@ -18,83 +18,51 @@
 clj꞉clojure-katas.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉clojure-katas.core꞉> 
+; Syntax error compiling at (src/clojure_katas/6-kyu/sum-consecutives.clj:10:1).
+; Unable to resolve symbol: sum-consecutives in this context
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
 nil
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-; Syntax error compiling at (c:\Users\Jannik\Projekte\prog-stuff\comp-prog\CodeWars_Katas\clojure-katas\clojure-katas\src\clojure_katas\6-kyu\translate-roman-numerals.clj:13:9).
-; Unable to resolve symbol: translate-roman-numerals in this context
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-false
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-; Execution error (ArityException) at clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals (form-init8054424458718019594.clj:9).
-; Wrong number of args (2) passed to: clojure.lang.PersistentVector
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-; Execution error (ArityException) at clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals (form-init8054424458718019594.clj:9).
-; Wrong number of args (2) passed to: clojure.lang.PersistentVector
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
--4
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-[-4]
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-[-4 5]
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-nil
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-; Execution error (NullPointerException) at clojure-katas.6-kyu.translate-roman-numerals/eval7584 (form-init8054424458718019594.clj:22).
-; Cannot invoke "Object.getClass()" because "x" is null
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-; Execution error (ArityException) at clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals (form-init8054424458718019594.clj:9).
-; Wrong number of args (2) passed to: clojure.lang.PersistentVector
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-false
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-false
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-[1]
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-false
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-1
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
--4
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-0
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
--1
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-()
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-; Syntax error compiling at (c:\Users\Jannik\Projekte\prog-stuff\comp-prog\CodeWars_Katas\clojure-katas\clojure-katas\src\clojure_katas\6-kyu\translate-roman-numerals.clj:6:45).
-; Unable to resolve symbol: roman in this context
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-; Execution error (IllegalArgumentException) at clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals (form-init8054424458718019594.clj:7).
-; Don't know how to create ISeq from: java.lang.Long
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-1
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-4
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-; Execution error (ClassCastException) at clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals$fn (form-init8054424458718019594.clj:9).
-; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
-#'clojure-katas.6-kyu.translate-roman-numerals/translate-roman-numerals
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+#'clojure-katas.6-kyu.sum-consecutives/sum-consecutives
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+#'clojure-katas.6-kyu.sum-consecutives/sum-consecutives
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+((1) (4 4 4) (0) (4) (3 3) (1))
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+#'clojure-katas.6-kyu.sum-consecutives/sum-consecutives
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+; Execution error (ArityException) at clojure-katas.6-kyu.sum-consecutives/sum-consecutives (form-init7899140401619274346.clj:10).
+; Wrong number of args (7) passed to: clojure.core/reduce
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+#'clojure-katas.6-kyu.sum-consecutives/sum-consecutives
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+; Execution error (ArityException) at clojure-katas.6-kyu.sum-consecutives/sum-consecutives (form-init7899140401619274346.clj:10).
+; Wrong number of args (7) passed to: clojure.core/reduce
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+#'clojure-katas.6-kyu.sum-consecutives/sum-consecutives
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+(1 12 0 4 6 1)
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
 true
-clj꞉clojure-katas.6-kyu.translate-roman-numerals꞉> 
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+true
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+true
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+; Execution error (ArityException) at clojure-katas.6-kyu.sum-consecutives/eval7811 (form-init7899140401619274346.clj:18).
+; Wrong number of args (4) passed to: clojure.core/reduce
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+"((4 4 4) (3 3))"
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+#'clojure-katas.6-kyu.sum-consecutives/sum-consecutives
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+(1 12 0 4 6 1)
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+true
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+true
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+true
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+#'clojure-katas.6-kyu.sum-consecutives/sum-consecutives
+clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
