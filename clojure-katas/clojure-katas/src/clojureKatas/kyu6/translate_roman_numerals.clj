@@ -1,4 +1,4 @@
-(ns clojureKatas.kyu6.translate-roman-numerals
+(ns clojureKatas.kyu6.translate_roman_numerals
   (:use [clojure.string :only (split)]))
 
 (defn translate-roman-numerals [roman]

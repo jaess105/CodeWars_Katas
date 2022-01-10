@@ -1,4 +1,4 @@
-(ns clojureKatas.kyu7.jaden-case
+(ns clojureKatas.kyu7.jaden_case
   (:use [clojure.string :only (split capitalize join)]))
 
 (defn jaden-case [s]
