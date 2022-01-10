@@ -1,4 +1,4 @@
-(ns clojure-katas.6-kyu.sum-consecutives)
+(ns clojureKatas.kyu6.sum-consecutives)
 ;; https://www.codewars.com/kata/55eeddff3f64c954c2000059/train/clojure
 
 (def sum-consecutives

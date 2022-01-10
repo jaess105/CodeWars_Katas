@@ -18,7 +18,7 @@
 clj꞉clojure-katas.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉clojure-katas.core꞉> 
-; Syntax error compiling at (src/clojure_katas/6-kyu/sum-consecutives.clj:10:1).
+; Syntax error compiling at (src/clojureKatas/6-kyu/sum-consecutives.clj:10:1).
 ; Unable to resolve symbol: sum-consecutives in this context
 clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
 nil

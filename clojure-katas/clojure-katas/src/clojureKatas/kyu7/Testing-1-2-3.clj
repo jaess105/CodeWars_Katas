@@ -1,4 +1,4 @@
-(ns clojure-katas.7-kyu.Testing-1-2-3)
+(ns clojureKatas.kyu7.Testing-1-2-3)
 (comment "Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
           
 Write a function which takes a list of strings and returns each line prepended by the correct number.

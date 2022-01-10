@@ -1,4 +1,4 @@
-(ns clojure-katas.6-kyu.sumdigpow
+(ns clojureKatas.kyu6.sumdigpow
   (:require [clojure.math.numeric-tower :as math]
           [clojure.math.combinatorics :as combo]))
 
