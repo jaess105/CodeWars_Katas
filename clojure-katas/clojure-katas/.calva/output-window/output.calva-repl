@@ -5,7 +5,7 @@
 ; Happy coding! ♥️
 
 ; Jacking in...
-; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"0.9.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.27.4"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless
 ; Hooking up nREPL sessions...
 ; Connected session: clj
 ; TIPS: 
@@ -15,54 +15,340 @@
 ;   - `alt+up` and `alt+down` traverse up and down the REPL command history
 ;      when the cursor is after the last contents at the prompt
 ;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉clojure-katas.core꞉>  ; Use `alt+enter` to evaluate
+clj꞉clojure-katas.core꞉> 
 ; Jack-in done.
 clj꞉clojure-katas.core꞉> 
-; Syntax error compiling at (src/clojureKatas/6-kyu/sum-consecutives.clj:10:1).
-; Unable to resolve symbol: sum-consecutives in this context
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+; Syntax error compiling at (c:\Users\Jannik\Projekte\prog-stuff\comp-prog\CodeWars_Katas\clojure-katas\clojure-katas\src\clojureKatas\kyu5\perimeter.clj:47:1).
+; Unable to resolve symbol: defn in this context
+clj꞉clojureKatas.kyu5.perimeter꞉> 
 nil
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-#'clojure-katas.6-kyu.sum-consecutives/sum-consecutives
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-#'clojure-katas.6-kyu.sum-consecutives/sum-consecutives
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-((1) (4 4 4) (0) (4) (3 3) (1))
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-#'clojure-katas.6-kyu.sum-consecutives/sum-consecutives
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-; Execution error (ArityException) at clojure-katas.6-kyu.sum-consecutives/sum-consecutives (form-init7899140401619274346.clj:10).
-; Wrong number of args (7) passed to: clojure.core/reduce
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-#'clojure-katas.6-kyu.sum-consecutives/sum-consecutives
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-; Execution error (ArityException) at clojure-katas.6-kyu.sum-consecutives/sum-consecutives (form-init7899140401619274346.clj:10).
-; Wrong number of args (7) passed to: clojure.core/reduce
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-#'clojure-katas.6-kyu.sum-consecutives/sum-consecutives
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-(1 12 0 4 6 1)
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-true
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-true
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-true
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-; Execution error (ArityException) at clojure-katas.6-kyu.sum-consecutives/eval7811 (form-init7899140401619274346.clj:18).
-; Wrong number of args (4) passed to: clojure.core/reduce
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-"((4 4 4) (3 3))"
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-#'clojure-katas.6-kyu.sum-consecutives/sum-consecutives
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-(1 12 0 4 6 1)
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-true
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-true
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-true
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
-#'clojure-katas.6-kyu.sum-consecutives/sum-consecutives
-clj꞉clojure-katas.6-kyu.sum-consecutives꞉> 
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+; Execution error (ClassCastException) at clojureKatas.kyu5.perimeter/fib-seq-sum-fun (form-init6839155336723744281.clj:50).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+; Execution error (ArityException) at clojureKatas.kyu5.perimeter/fib-seq-sum-fun$fn (form-init6839155336723744281.clj:51).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#function[clojure.core/str] 5   [0 1 1 2]
+#function[clojure.core/str] 4   [0 1 1 2 3]
+#function[clojure.core/str] 3   [0 1 1 2 3 5]
+#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
+nil
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#function[clojure.core/str] 5   [0 1 1 2]
+#function[clojure.core/str] 4   [0 1 1 2 3]
+#function[clojure.core/str] 3   [0 1 1 2 3 5]
+#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
+20
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/perimeter3
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+132
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+352
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/perimeter3
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#function[clojure.core/str] 5   [0 1 1 2]
+#function[clojure.core/str] 4   [0 1 1 2 3]
+#function[clojure.core/str] 3   [0 1 1 2 3 5]
+#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
+20
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#function[clojure.core/str] 6   [0 1 1 2]
+#function[clojure.core/str] 5   [0 1 1 2 3]
+#function[clojure.core/str] 4   [0 1 1 2 3 5]
+#function[clojure.core/str] 3   [0 1 1 2 3 5 8]
+#function[clojure.core/str] 2   [0 1 1 2 3 5 8 13]
+132
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#function[clojure.core/str] 5   [0 1 1 2]
+#function[clojure.core/str] 4   [0 1 1 2 3]
+#function[clojure.core/str] 3   [0 1 1 2 3 5]
+12
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#function[clojure.core/str] 5   [0 1 1 2]
+#function[clojure.core/str] 4   [0 1 1 2 3]
+#function[clojure.core/str] 3   [0 1 1 2 3 5]
+#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
+20
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#function[clojure.core/str] 6   [0 1 1 2]
+#function[clojure.core/str] 5   [0 1 1 2 3]
+#function[clojure.core/str] 4   [0 1 1 2 3 5]
+#function[clojure.core/str] 3   [0 1 1 2 3 5 8]
+#function[clojure.core/str] 2   [0 1 1 2 3 5 8 13]
+132
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/perimeter3
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+; Execution error (ClassCastException) at clojureKatas.kyu5.perimeter/perimeter3 (form-init6839155336723744281.clj:57).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/perimeter3
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#function[clojure.core/str] 4   [0 1 1 2]
+#function[clojure.core/str] 3   [0 1 1 2 3]
+#function[clojure.core/str] 2   [0 1 1 2 3 5]
+48
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/perimeter3
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#function[clojure.core/str] 5   [0 1 1 2]
+#function[clojure.core/str] 4   [0 1 1 2 3]
+#function[clojure.core/str] 3   [0 1 1 2 3 5]
+#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
+80
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#function[clojure.core/str] 7   [0 1 1 2]
+#function[clojure.core/str] 6   [0 1 1 2 3]
+#function[clojure.core/str] 5   [0 1 1 2 3 5]
+#function[clojure.core/str] 4   [0 1 1 2 3 5 8]
+#function[clojure.core/str] 3   [0 1 1 2 3 5 8 13]
+#function[clojure.core/str] 2   [0 1 1 2 3 5 8 13 21]
+216
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/perimeter3
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#function[clojure.core/str] 5   [0 1 1 2]
+#function[clojure.core/str] 4   [0 1 1 2 3]
+#function[clojure.core/str] 3   [0 1 1 2 3 5]
+#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
+80
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#function[clojure.core/str] 5   [0 1 1 2]
+#function[clojure.core/str] 4   [0 1 1 2 3]
+#function[clojure.core/str] 3   [0 1 1 2 3 5]
+#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
+20
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+; Syntax error compiling at (c:\Users\Jannik\Projekte\prog-stuff\comp-prog\CodeWars_Katas\clojure-katas\clojure-katas\src\clojureKatas\kyu5\perimeter.clj:62:1).
+; Unable to resolve symbol: perimeter in this context
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/perimeter
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#function[clojure.core/str] 5   [0 1 1 2]
+#function[clojure.core/str] 4   [0 1 1 2 3]
+#function[clojure.core/str] 3   [0 1 1 2 3 5]
+#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
+80
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/perimeter
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#function[clojure.core/str] 5   [0 1 1 2]
+#function[clojure.core/str] 4   [0 1 1 2 3]
+#function[clojure.core/str] 3   [0 1 1 2 3 5]
+#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
+20N
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#function[clojure.core/str] 5   [0 1 1 2]
+#function[clojure.core/str] 4   [0 1 1 2 3]
+#function[clojure.core/str] 3   [0 1 1 2 3 5]
+#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
+80N
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/perimeter
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#function[clojure.core/str] 5   [0 1 1 2N]
+#function[clojure.core/str] 4   [0 1 1 2N 3N]
+#function[clojure.core/str] 3   [0 1 1 2N 3N 5N]
+#function[clojure.core/str] 2   [0 1 1 2N 3N 5N 8N]
+20N
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#function[clojure.core/str] 5   [0 1 1 2N]
+#function[clojure.core/str] 4   [0 1 1 2N 3N]
+#function[clojure.core/str] 3   [0 1 1 2N 3N 5N]
+#function[clojure.core/str] 2   [0 1 1 2N 3N 5N 8N]
+80N
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/perimeter
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+20N
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+80N
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/perimeter
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+20N
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+80N
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+; Execution error (ClassCastException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:23).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+; Execution error (ClassCastException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:23).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+; Execution error (ClassCastException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:23).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+; Execution error (ClassCastException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:23).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+; Execution error (ArityException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:23).
+; Wrong number of args (1) passed to: clojureKatas.kyu5.perimeter/fib-seq-sum/fn--8145
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+; Execution error (ArityException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:23).
+; Wrong number of args (1) passed to: clojureKatas.kyu5.perimeter/fib-seq-sum/fn--8166
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+; Execution error (ArityException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:23).
+; Wrong number of args (1) passed to: clojureKatas.kyu5.perimeter/fib-seq-sum/fn--8179
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+; Execution error (ClassCastException) at clojureKatas.kyu5.perimeter/fib-seq-sum$fn (form-init6839155336723744281.clj:22).
+; class clojureKatas.kyu5.perimeter$fib_seq_sum$fn__8218 cannot be cast to class java.lang.Number (clojureKatas.kyu5.perimeter$fib_seq_sum$fn__8218 is in unnamed module of loader clojure.lang.DynamicClassLoader @70ae327d; java.lang.Number is in module java.base of loader 'bootstrap')
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+; Execution error (ArithmeticException) at clojureKatas.kyu5.perimeter/fib-seq-sum$fn (form-init6839155336723744281.clj:22).
+; integer overflow
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+; Syntax error compiling at (c:\Users\Jannik\Projekte\prog-stuff\comp-prog\CodeWars_Katas\clojure-katas\clojure-katas\src\clojureKatas\kyu5\perimeter.clj:15:21).
+; Unable to resolve symbol: n in this context
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+15
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+63
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+31
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+15
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+11
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+32
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+1 1
+1 2
+2 3
+3 5
+5 8
+8 13
+32
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+1 1
+1 2
+2 3
+3 5
+5 8
+19
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+1 1
+; Execution error (ArityException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:21).
+; Wrong number of args (5) passed to: clojureKatas.kyu5.perimeter/fib-seq-sum/fn--8457
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+1 1
+; Execution error (ArityException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:21).
+; Wrong number of args (5) passed to: clojureKatas.kyu5.perimeter/fib-seq-sum/fn--8468
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+1 1
+; Execution error (ArityException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:21).
+; Wrong number of args (5) passed to: clojureKatas.kyu5.perimeter/fib-seq-sum/fn--8491
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+1 1
+1 2
+2 3
+3 5
+5 8
+19N
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/fib-seq-sum
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+1 1
+1 2
+2 3
+3 5
+5 8
+20N
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+80N
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+216N
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'clojureKatas.kyu5.perimeter/perimeter
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+1 1
+1 2
+2 3
+3 5
+5 8
+80N
+clj꞉clojureKatas.kyu5.perimeter꞉> 
+1 1
+1 2
+2 3
+3 5
+5 8
+8 13
+13 21
+216N
+clj꞉clojureKatas.kyu5.perimeter꞉> 
