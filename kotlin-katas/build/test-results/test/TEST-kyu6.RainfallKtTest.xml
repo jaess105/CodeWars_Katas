@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kyu6.RainfallKtTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-03-18T10:34:08" hostname="Janniks-PC" time="0.037">
+  <properties/>
+  <testcase name="test1()" classname="kyu6.RainfallKtTest" time="0.032"/>
+  <testcase name="test2()" classname="kyu6.RainfallKtTest" time="0.003"/>
+  <testcase name="attemt_test3()" classname="kyu6.RainfallKtTest" time="0.001"/>
+  <system-out><![CDATA[Fixed Tests: mean data
+Fixed Tests: variance data
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="kyu8.SimpleMultiplicationKtTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-03-17T16:47:30" hostname="Janniks-PC" time="0.023">
-  <properties/>
-  <testcase name="testOdd()" classname="kyu8.SimpleMultiplicationKtTest" time="0.021"/>
-  <testcase name="testEven()" classname="kyu8.SimpleMultiplicationKtTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
