@@ -13,9 +13,5 @@
 			"label": "dart: dart pub get",
 			"detail": ""
 		},
-		{
-			"type": "dart"
-			"command": ""
-		}
 	]
 }
