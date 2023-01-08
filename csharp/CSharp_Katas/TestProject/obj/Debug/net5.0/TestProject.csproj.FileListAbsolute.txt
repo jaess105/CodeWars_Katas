@@ -10,7 +10,6 @@ C:\Users\Jannik-Gaming\proj\prog-stuff\comp_prog\CodeWars_Katas\csharp\CSharp_Ka
 C:\Users\Jannik-Gaming\proj\prog-stuff\comp_prog\CodeWars_Katas\csharp\CSharp_Katas\TestProject\bin\Debug\net5.0\TestProject.runtimeconfig.json
 C:\Users\Jannik-Gaming\proj\prog-stuff\comp_prog\CodeWars_Katas\csharp\CSharp_Katas\TestProject\bin\Debug\net5.0\TestProject.runtimeconfig.dev.json
 C:\Users\Jannik-Gaming\proj\prog-stuff\comp_prog\CodeWars_Katas\csharp\CSharp_Katas\TestProject\bin\Debug\net5.0\TestProject.dll
-C:\Users\Jannik-Gaming\proj\prog-stuff\comp_prog\CodeWars_Katas\csharp\CSharp_Katas\TestProject\bin\Debug\net5.0\ref\TestProject.dll
 C:\Users\Jannik-Gaming\proj\prog-stuff\comp_prog\CodeWars_Katas\csharp\CSharp_Katas\TestProject\bin\Debug\net5.0\TestProject.pdb
 C:\Users\Jannik-Gaming\proj\prog-stuff\comp_prog\CodeWars_Katas\csharp\CSharp_Katas\TestProject\bin\Debug\net5.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\Jannik-Gaming\proj\prog-stuff\comp_prog\CodeWars_Katas\csharp\CSharp_Katas\TestProject\bin\Debug\net5.0\Microsoft.DotNet.InternalAbstractions.dll
@@ -106,3 +105,4 @@ C:\Users\Jannik-Gaming\proj\prog-stuff\comp_prog\CodeWars_Katas\csharp\CSharp_Ka
 C:\Users\Jannik-Gaming\proj\prog-stuff\comp_prog\CodeWars_Katas\csharp\CSharp_Katas\TestProject\bin\Debug\net5.0\Katas.exe
 C:\Users\Jannik-Gaming\proj\prog-stuff\comp_prog\CodeWars_Katas\csharp\CSharp_Katas\TestProject\bin\Debug\net5.0\Katas.dll
 C:\Users\Jannik-Gaming\proj\prog-stuff\comp_prog\CodeWars_Katas\csharp\CSharp_Katas\TestProject\bin\Debug\net5.0\Katas.pdb
+c:\Users\Jannik-Gaming\proj\prog-stuff\comp_prog\CodeWars_Katas\csharp\CSharp_Katas\TestProject\obj\Debug\net5.0\refint\TestProject.dll

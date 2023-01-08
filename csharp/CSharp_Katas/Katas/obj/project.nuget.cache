@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "6kgRi7h4j8eXRkXXeLky7+4/q+8sHQOI3FbWVoTZKNC2oJYyOEHU1kpdoycJJ3eEJtkxcewJB1a6PeL0YNfUWQ==",
+  "dgSpecHash": "FsgV29KgJe/WFl8msyjlG+9HIXPirhErs+VssrL58gFBZ9b0NO+DxOTcSQ/xczapW6ijhfYKzETqwzWByZ9bvg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jannik-Gaming\\proj\\prog-stuff\\comp_prog\\CodeWars_Katas\\csharp\\CSharp_Katas\\Katas\\Katas.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Jannik-Gaming\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
   "logs": []
 }
