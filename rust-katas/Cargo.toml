@@ -1,0 +1,16 @@
+[package]
+name = "rust-katas"
+version = "0.1.0"
+edition = "2021"
+authors = ["Jannik Esser"]
+homepage = "https://github.com/jaess105/CodeWars_Katas"
+
+
+[lib]
+name = "codewars"
+path = "src/main/main.rs"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
