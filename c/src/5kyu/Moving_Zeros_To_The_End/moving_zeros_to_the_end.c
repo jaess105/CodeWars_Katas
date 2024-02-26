@@ -14,11 +14,11 @@ void move_zeros(size_t len, int arr[len])
 
     for (; i < len; i++)
     {
-        if (arr[i] != 0)
-        {
-            *last_zero = arr[i];
-            arr[i] = 0;
-            last_zero++;
-        }
+        if (arr[i] == 0)
+            continue;
+        
+        *last_zero = arr[i];
+        arr[i] = 0;
+        last_zero++;
     }
 }
