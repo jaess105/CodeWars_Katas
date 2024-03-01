@@ -6,66 +6,66 @@ static void do_test(const char *str, const char *expected);
 static void complete_test();
 static void test_trim(const char *expected, const char *test_str);
 
-// Test(the_multiply_function1, should_pass_all_the_tests_provided)
-// {
-//     do_test("", "");
+Test(the_multiply_function1, should_pass_all_the_tests_provided)
+{
+    do_test("", "");
 
-//     complete_test();
-// }
+    complete_test();
+}
 
-// Test(the_multiply_function2, should_pass_all_the_tests_provided)
-// {
-//     do_test("A", "65");
+Test(the_multiply_function2, should_pass_all_the_tests_provided)
+{
+    do_test("A", "65");
 
-//     complete_test();
-// }
-// Test(the_multiply_function3, should_pass_all_the_tests_provided)
-// {
+    complete_test();
+}
+Test(the_multiply_function3, should_pass_all_the_tests_provided)
+{
 
-//     do_test("Ab", "65b");
+    do_test("Ab", "65b");
 
-//     complete_test();
-// }
+    complete_test();
+}
 
-// Test(the_multiply_function3_2, should_pass_all_the_tests_provided)
-// {
+Test(the_multiply_function3_2, should_pass_all_the_tests_provided)
+{
 
-//     do_test("Abc", "65cb");
+    do_test("Abc", "65cb");
 
-//     complete_test();
-// }
+    complete_test();
+}
 
-// Test(the_multiply_function4, should_pass_all_the_tests_provided)
-// {
-//     do_test("Abcd", "65dcb");
-//     complete_test();
-// }
-// Test(the_multiply_function5, should_pass_all_the_tests_provided)
-// {
+Test(the_multiply_function4, should_pass_all_the_tests_provided)
+{
+    do_test("Abcd", "65dcb");
+    complete_test();
+}
+Test(the_multiply_function5, should_pass_all_the_tests_provided)
+{
 
-//     do_test("Abcd", "65dcb");
+    do_test("Abcd", "65dcb");
 
-//     complete_test();
-// }
-// Test(the_multiply_function6, should_pass_all_the_tests_provided)
-// {
+    complete_test();
+}
+Test(the_multiply_function6, should_pass_all_the_tests_provided)
+{
 
-//     do_test("  Abcd   Abcd", "65dcb 65dcb");
-//     do_test("Abcd Aahhhhhhhhhhhhhhhhz", "65dcb 65zhhhhhhhhhhhhhhhha");
-//     do_test(" Hello world ", "72olle 119drlo");
-//     complete_test();
-// }
-// Test(the_multiply_function7, should_pass_all_the_tests_provided)
-// {
+    do_test("  Abcd   Abcd", "65dcb 65dcb");
+    do_test("Abcd Aahhhhhhhhhhhhhhhhz", "65dcb 65zhhhhhhhhhhhhhhhha");
+    do_test(" Hello world ", "72olle 119drlo");
+    complete_test();
+}
+Test(the_multiply_function7, should_pass_all_the_tests_provided)
+{
 
-//     do_test("Abcd Aahhhhhhhhhhhhhhhhz", "65dcb 65zhhhhhhhhhhhhhhhha");
-//     complete_test();
-// }
-// Test(the_multiply_function8, should_pass_all_the_tests_provided)
-// {
-//     do_test(" Hello world ", "72olle 119drlo");
-//     complete_test();
-// }
+    do_test("Abcd Aahhhhhhhhhhhhhhhhz", "65dcb 65zhhhhhhhhhhhhhhhha");
+    complete_test();
+}
+Test(the_multiply_function8, should_pass_all_the_tests_provided)
+{
+    do_test(" Hello world ", "72olle 119drlo");
+    complete_test();
+}
 
 Test(the_multiply_function9, should_pass_all_the_tests_provided)
 {
