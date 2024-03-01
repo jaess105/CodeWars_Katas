@@ -29,7 +29,7 @@ RUNT: $(OUT)
 	time ./$(OUT)
 
 $(TEST_EXE): $(TEST_SCRIPT_C) $(TARGET)
-	gcc -Wall -Wextra -o $(TEST_EXE)\
+	gcc -Wall -Wextra -DDEBUG -o $(TEST_EXE)\
 	 $(TEST_SCRIPT_C) $(TARGET)\
 	  -I$(CRITERION_INCLUDE) -L$(CRITERION_LIB) -lcriterion -Wl,-rpath=$(CRITERION_LIB)
 
