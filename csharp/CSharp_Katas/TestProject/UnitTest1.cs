@@ -1,6 +1,6 @@
-using Microsoft.VisualStudio.TestPlatform.TestHost;
-using NUnit.Framework;
 using Katas;
+using NUnit.Framework;
+using Assert = TestProject.Extensions.AssertExtensions;
 
 namespace TestProject
 {

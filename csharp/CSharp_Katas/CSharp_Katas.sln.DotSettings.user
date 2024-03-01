@@ -2,12 +2,8 @@
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
   &lt;Assembly Path="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Linq.Expressions.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3a18be99_002D93f6_002D4042_002Da924_002D4076d54044fb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::A27F16CB-B00A-4FA2-A5F5-5BFE9D187AFA::net5.0::TestProject.ClockTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::A27F16CB-B00A-4FA2-A5F5-5BFE9D187AFA::net5.0::TestProject.ArraysInversionTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::A27F16CB-B00A-4FA2-A5F5-5BFE9D187AFA::net5.0::TestProject.StringToNumberTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::A27F16CB-B00A-4FA2-A5F5-5BFE9D187AFA::net5.0::TestProject.DubstepTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::A27F16CB-B00A-4FA2-A5F5-5BFE9D187AFA::net5.0::TestProject.Kyu5.PrimeDecompTests&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestProjectMapping/=592A1B0B_002DC254_002D4497_002DAAEC_002DD9A162E0C079/@EntryIndexedValue">A27F16CB-B00A-4FA2-A5F5-5BFE9D187AFA</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestTemplateMapping/=NUnit3x/@EntryIndexedValue">db4927dd-2e12-48a7-9a84-2b7e3e31b9c8</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3a18be99_002D93f6_002D4042_002Da924_002D4076d54044fb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/home/jannik/proj/comp-prog/CodeWars_Katas/csharp/CSharp_Katas/TestProject" Presentation="&amp;lt;TestProject&amp;gt;" /&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

@@ -1,5 +1,6 @@
 ﻿using Katas.Kyu5;
 using NUnit.Framework;
+using Assert = TestProject.Extensions.AssertExtensions;
 
 namespace TestProject.Kyu5
 {

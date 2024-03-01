@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Katas.Kyu6;
+using Assert = TestProject.Extensions.AssertExtensions;
+
 
 namespace TestProject.Kyu6
 {

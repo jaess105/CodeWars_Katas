@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using System;
-using Katas;
+using Katas;using Assert = TestProject.Extensions.AssertExtensions;
+
 
 
 namespace TestProject
