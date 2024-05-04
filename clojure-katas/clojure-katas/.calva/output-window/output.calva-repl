@@ -1,354 +1,1192 @@
 ; This is the Calva evaluation results output window.
-; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
 ;   when connected to a REPL session.
 ; Please see https://calva.io/output/ for more info.
 ; Happy coding! ♥️
 
 ; Jacking in...
-; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"0.9.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.27.4"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless
-; Hooking up nREPL sessions...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /home/jannik/proj/prog/comp-prog/CodeWars_Katas/clojure-katas/clojure-katas ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.30.0"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; Using host:port 127.0.0.1:34759 ...
+; Hooking up nREPL sessions ...
 ; Connected session: clj
-; TIPS: 
+; TIPS:
 ;   - You can edit the contents here. Use it as a REPL if you like.
 ;   - `alt+enter` evaluates the current top level form.
 ;   - `ctrl+enter` evaluates the current form.
 ;   - `alt+up` and `alt+down` traverse up and down the REPL command history
 ;      when the cursor is after the last contents at the prompt
 ;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉clojure-katas.core꞉>  ; Use `alt+enter` to evaluate
 clj꞉clojure-katas.core꞉> 
 ; Jack-in done.
 clj꞉clojure-katas.core꞉> 
-; Syntax error compiling at (c:\Users\Jannik\Projekte\prog-stuff\comp-prog\CodeWars_Katas\clojure-katas\clojure-katas\src\clojureKatas\kyu5\perimeter.clj:47:1).
-; Unable to resolve symbol: defn in this context
-clj꞉clojureKatas.kyu5.perimeter꞉> 
+#'highest-rank/highest-rank
+clj꞉highest-rank꞉> 
+#'clojureKatas.kyu6.highest-rank-test/Testing
+clj꞉clojureKatas.kyu6.highest-rank-test꞉> 
+
+ERROR in (Testing) (core.clj:1576)
+[12, 10, 8, 12, 7, 6, 4, 10, 10]
+expected: (= (highest-rank [12 10 8 12 7 6 4 10 10]) 10)
+  actual: java.lang.ClassCastException: class clojure.core$val cannot be cast to class java.util.Map$Entry (clojure.core$val is in unnamed module of loader 'app'; java.util.Map$Entry is in module java.base of loader 'bootstrap')
+ at clojure.core$val.invokeStatic (core.clj:1576)
+    clojure.core$val.invoke (core.clj:1576)
+    highest_rank$highest_rank$fn__9678.invoke (form-init1764168668838477482.clj:14)
+    clojure.core.protocols$iter_reduce.invokeStatic (protocols.clj:39)
+    clojure.core.protocols$fn__8162.invokeStatic (protocols.clj:75)
+    clojure.core.protocols/fn (protocols.clj:75)
+    clojure.core.protocols$fn__8110$G__8105__8123.invoke (protocols.clj:13)
+    clojure.core$reduce.invokeStatic (core.clj:6826)
+    clojure.core$reduce.invoke (core.clj:6812)
+    highest_rank$highest_rank.invokeStatic (form-init1764168668838477482.clj:13)
+    highest_rank$highest_rank.invoke (form-init1764168668838477482.clj:3)
+    clojureKatas.kyu6.highest_rank_test$fn__9691$fn__9696.invoke (form-init1764168668838477482.clj:12)
+    clojureKatas.kyu6.highest_rank_test$fn__9691.invokeStatic (form-init1764168668838477482.clj:10)
+    clojureKatas.kyu6.highest_rank_test/fn (form-init1764168668838477482.clj:5)
+    clojure.test$test_var$fn__9761.invoke (test.clj:717)
+    clojure.test$test_var.invokeStatic (test.clj:717)
+    clojure.test$test_var.invoke (test.clj:708)
+    clojureKatas.kyu6.highest_rank_test$Testing.invokeStatic (form-init1764168668838477482.clj:5)
+    clojureKatas.kyu6.highest_rank_test$Testing.invoke (form-init1764168668838477482.clj:5)
+    clojureKatas.kyu6.highest_rank_test$eval9708.invokeStatic (form-init1764168668838477482.clj:23)
+    clojureKatas.kyu6.highest_rank_test$eval9708.invoke (form-init1764168668838477482.clj:23)
+    clojure.lang.Compiler.eval (Compiler.java:7181)
+    clojure.lang.Compiler.eval (Compiler.java:7136)
+    clojure.core$eval.invokeStatic (core.clj:3202)
+    clojure.core$eval.invoke (core.clj:3198)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1258$fn__1259.invoke (interruptible_eval.clj:87)
+    clojure.lang.AFn.applyToHelper (AFn.java:152)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invokeStatic (core.clj:667)
+    clojure.core$with_bindings_STAR_.invokeStatic (core.clj:1977)
+    clojure.core$with_bindings_STAR_.doInvoke (core.clj:1977)
+    clojure.lang.RestFn.invoke (RestFn.java:425)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1258.invoke (interruptible_eval.clj:87)
+    clojure.main$repl$read_eval_print__9110$fn__9113.invoke (main.clj:437)
+    clojure.main$repl$read_eval_print__9110.invoke (main.clj:437)
+    clojure.main$repl$fn__9119.invoke (main.clj:458)
+    clojure.main$repl.invokeStatic (main.clj:458)
+    clojure.main$repl.doInvoke (main.clj:368)
+    clojure.lang.RestFn.invoke (RestFn.java:1523)
+    nrepl.middleware.interruptible_eval$evaluate.invokeStatic (interruptible_eval.clj:84)
+    nrepl.middleware.interruptible_eval$evaluate.invoke (interruptible_eval.clj:56)
+    nrepl.middleware.interruptible_eval$interruptible_eval$fn__1291$fn__1295.invoke (interruptible_eval.clj:152)
+    clojure.lang.AFn.run (AFn.java:22)
+    nrepl.middleware.session$session_exec$main_loop__1361$fn__1365.invoke (session.clj:218)
+    nrepl.middleware.session$session_exec$main_loop__1361.invoke (session.clj:217)
+    clojure.lang.AFn.run (AFn.java:22)
+    java.lang.Thread.run (Thread.java:833)
+
+ERROR in (Testing) (core.clj:1569)
+[12, 10, 8, 12, 7, 6, 4, 10, 10, 12, 12, 14, 14, 14, 14]
+expected: (= (highest-rank [12 10 8 12 7 6 4 10 10 12 12 14 14 14 14]) 14)
+  actual: java.lang.ClassCastException: class clojure.core$val cannot be cast to class java.util.Map$Entry (clojure.core$val is in unnamed module of loader 'app'; java.util.Map$Entry is in module java.base of loader 'bootstrap')
+ at clojure.core$key.invokeStatic (core.clj:1569)
+    clojure.core$key.invoke (core.clj:1569)
+    highest_rank$highest_rank.invokeStatic (form-init1764168668838477482.clj:13)
+    highest_rank$highest_rank.invoke (form-init1764168668838477482.clj:3)
+    clojureKatas.kyu6.highest_rank_test$fn__9691.invokeStatic (form-init1764168668838477482.clj:20)
+    clojureKatas.kyu6.highest_rank_test/fn (form-init1764168668838477482.clj:5)
+    clojure.test$test_var$fn__9761.invoke (test.clj:717)
+    clojure.test$test_var.invokeStatic (test.clj:717)
+    clojure.test$test_var.invoke (test.clj:708)
+    clojureKatas.kyu6.highest_rank_test$Testing.invokeStatic (form-init1764168668838477482.clj:5)
+    clojureKatas.kyu6.highest_rank_test$Testing.invoke (form-init1764168668838477482.clj:5)
+    clojureKatas.kyu6.highest_rank_test$eval9708.invokeStatic (form-init1764168668838477482.clj:23)
+    clojureKatas.kyu6.highest_rank_test$eval9708.invoke (form-init1764168668838477482.clj:23)
+    clojure.lang.Compiler.eval (Compiler.java:7181)
+    clojure.lang.Compiler.eval (Compiler.java:7136)
+    clojure.core$eval.invokeStatic (core.clj:3202)
+    clojure.core$eval.invoke (core.clj:3198)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1258$fn__1259.invoke (interruptible_eval.clj:87)
+    clojure.lang.AFn.applyToHelper (AFn.java:152)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invokeStatic (core.clj:667)
+    clojure.core$with_bindings_STAR_.invokeStatic (core.clj:1977)
+    clojure.core$with_bindings_STAR_.doInvoke (core.clj:1977)
+    clojure.lang.RestFn.invoke (RestFn.java:425)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1258.invoke (interruptible_eval.clj:87)
+    clojure.main$repl$read_eval_print__9110$fn__9113.invoke (main.clj:437)
+    clojure.main$repl$read_eval_print__9110.invoke (main.clj:437)
+    clojure.main$repl$fn__9119.invoke (main.clj:458)
+    clojure.main$repl.invokeStatic (main.clj:458)
+    clojure.main$repl.doInvoke (main.clj:368)
+    clojure.lang.RestFn.invoke (RestFn.java:1523)
+    nrepl.middleware.interruptible_eval$evaluate.invokeStatic (interruptible_eval.clj:84)
+    nrepl.middleware.interruptible_eval$evaluate.invoke (interruptible_eval.clj:56)
+    nrepl.middleware.interruptible_eval$interruptible_eval$fn__1291$fn__1295.invoke (interruptible_eval.clj:152)
+    clojure.lang.AFn.run (AFn.java:22)
+    nrepl.middleware.session$session_exec$main_loop__1361$fn__1365.invoke (session.clj:218)
+    nrepl.middleware.session$session_exec$main_loop__1361.invoke (session.clj:217)
+    clojure.lang.AFn.run (AFn.java:22)
+    java.lang.Thread.run (Thread.java:833)
 nil
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-; Execution error (ClassCastException) at clojureKatas.kyu5.perimeter/fib-seq-sum-fun (form-init6839155336723744281.clj:50).
-; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-; Execution error (ArityException) at clojureKatas.kyu5.perimeter/fib-seq-sum-fun$fn (form-init6839155336723744281.clj:51).
-; Wrong number of args (0) passed to: clojure.lang.PersistentVector
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#function[clojure.core/str] 5   [0 1 1 2]
-#function[clojure.core/str] 4   [0 1 1 2 3]
-#function[clojure.core/str] 3   [0 1 1 2 3 5]
-#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
-nil
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#function[clojure.core/str] 5   [0 1 1 2]
-#function[clojure.core/str] 4   [0 1 1 2 3]
-#function[clojure.core/str] 3   [0 1 1 2 3 5]
-#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
-20
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/perimeter3
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-132
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-352
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/perimeter3
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#function[clojure.core/str] 5   [0 1 1 2]
-#function[clojure.core/str] 4   [0 1 1 2 3]
-#function[clojure.core/str] 3   [0 1 1 2 3 5]
-#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
-20
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#function[clojure.core/str] 6   [0 1 1 2]
-#function[clojure.core/str] 5   [0 1 1 2 3]
-#function[clojure.core/str] 4   [0 1 1 2 3 5]
-#function[clojure.core/str] 3   [0 1 1 2 3 5 8]
-#function[clojure.core/str] 2   [0 1 1 2 3 5 8 13]
-132
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#function[clojure.core/str] 5   [0 1 1 2]
-#function[clojure.core/str] 4   [0 1 1 2 3]
-#function[clojure.core/str] 3   [0 1 1 2 3 5]
+clj꞉clojureKatas.kyu6.highest-rank-test꞉> 
+([:a 1])
+clj꞉highest-rank꞉> 
+(:a)
+clj꞉highest-rank꞉> 
+(:a)
+clj꞉highest-rank꞉> 
+(1)
+clj꞉highest-rank꞉> 
+#'highest-rank/highest-rank
+clj꞉highest-rank꞉> 
 12
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#function[clojure.core/str] 5   [0 1 1 2]
-#function[clojure.core/str] 4   [0 1 1 2 3]
-#function[clojure.core/str] 3   [0 1 1 2 3 5]
-#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
-20
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#function[clojure.core/str] 6   [0 1 1 2]
-#function[clojure.core/str] 5   [0 1 1 2 3]
-#function[clojure.core/str] 4   [0 1 1 2 3 5]
-#function[clojure.core/str] 3   [0 1 1 2 3 5 8]
-#function[clojure.core/str] 2   [0 1 1 2 3 5 8 13]
-132
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/perimeter3
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-; Execution error (ClassCastException) at clojureKatas.kyu5.perimeter/perimeter3 (form-init6839155336723744281.clj:57).
-; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/perimeter3
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#function[clojure.core/str] 4   [0 1 1 2]
-#function[clojure.core/str] 3   [0 1 1 2 3]
-#function[clojure.core/str] 2   [0 1 1 2 3 5]
-48
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/perimeter3
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#function[clojure.core/str] 5   [0 1 1 2]
-#function[clojure.core/str] 4   [0 1 1 2 3]
-#function[clojure.core/str] 3   [0 1 1 2 3 5]
-#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
-80
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#function[clojure.core/str] 7   [0 1 1 2]
-#function[clojure.core/str] 6   [0 1 1 2 3]
-#function[clojure.core/str] 5   [0 1 1 2 3 5]
-#function[clojure.core/str] 4   [0 1 1 2 3 5 8]
-#function[clojure.core/str] 3   [0 1 1 2 3 5 8 13]
-#function[clojure.core/str] 2   [0 1 1 2 3 5 8 13 21]
-216
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/perimeter3
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#function[clojure.core/str] 5   [0 1 1 2]
-#function[clojure.core/str] 4   [0 1 1 2 3]
-#function[clojure.core/str] 3   [0 1 1 2 3 5]
-#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
-80
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#function[clojure.core/str] 5   [0 1 1 2]
-#function[clojure.core/str] 4   [0 1 1 2 3]
-#function[clojure.core/str] 3   [0 1 1 2 3 5]
-#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
-20
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-; Syntax error compiling at (c:\Users\Jannik\Projekte\prog-stuff\comp-prog\CodeWars_Katas\clojure-katas\clojure-katas\src\clojureKatas\kyu5\perimeter.clj:62:1).
-; Unable to resolve symbol: perimeter in this context
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/perimeter
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#function[clojure.core/str] 5   [0 1 1 2]
-#function[clojure.core/str] 4   [0 1 1 2 3]
-#function[clojure.core/str] 3   [0 1 1 2 3 5]
-#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
-80
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/perimeter
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#function[clojure.core/str] 5   [0 1 1 2]
-#function[clojure.core/str] 4   [0 1 1 2 3]
-#function[clojure.core/str] 3   [0 1 1 2 3 5]
-#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
-20N
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#function[clojure.core/str] 5   [0 1 1 2]
-#function[clojure.core/str] 4   [0 1 1 2 3]
-#function[clojure.core/str] 3   [0 1 1 2 3 5]
-#function[clojure.core/str] 2   [0 1 1 2 3 5 8]
-80N
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/perimeter
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#function[clojure.core/str] 5   [0 1 1 2N]
-#function[clojure.core/str] 4   [0 1 1 2N 3N]
-#function[clojure.core/str] 3   [0 1 1 2N 3N 5N]
-#function[clojure.core/str] 2   [0 1 1 2N 3N 5N 8N]
-20N
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#function[clojure.core/str] 5   [0 1 1 2N]
-#function[clojure.core/str] 4   [0 1 1 2N 3N]
-#function[clojure.core/str] 3   [0 1 1 2N 3N 5N]
-#function[clojure.core/str] 2   [0 1 1 2N 3N 5N 8N]
-80N
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/perimeter
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-20N
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-80N
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum-fun
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/perimeter
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-20N
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-80N
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-; Execution error (ClassCastException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:23).
-; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-; Execution error (ClassCastException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:23).
-; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-; Execution error (ClassCastException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:23).
-; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-; Execution error (ClassCastException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:23).
-; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-; Execution error (ArityException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:23).
-; Wrong number of args (1) passed to: clojureKatas.kyu5.perimeter/fib-seq-sum/fn--8145
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-; Execution error (ArityException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:23).
-; Wrong number of args (1) passed to: clojureKatas.kyu5.perimeter/fib-seq-sum/fn--8166
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-; Execution error (ArityException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:23).
-; Wrong number of args (1) passed to: clojureKatas.kyu5.perimeter/fib-seq-sum/fn--8179
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-; Execution error (ClassCastException) at clojureKatas.kyu5.perimeter/fib-seq-sum$fn (form-init6839155336723744281.clj:22).
-; class clojureKatas.kyu5.perimeter$fib_seq_sum$fn__8218 cannot be cast to class java.lang.Number (clojureKatas.kyu5.perimeter$fib_seq_sum$fn__8218 is in unnamed module of loader clojure.lang.DynamicClassLoader @70ae327d; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-; Execution error (ArithmeticException) at clojureKatas.kyu5.perimeter/fib-seq-sum$fn (form-init6839155336723744281.clj:22).
-; integer overflow
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-; Syntax error compiling at (c:\Users\Jannik\Projekte\prog-stuff\comp-prog\CodeWars_Katas\clojure-katas\clojure-katas\src\clojureKatas\kyu5\perimeter.clj:15:21).
-; Unable to resolve symbol: n in this context
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-15
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-63
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-31
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-15
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-11
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-32
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-1 1
-1 2
-2 3
-3 5
-5 8
-8 13
-32
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-1 1
-1 2
-2 3
-3 5
-5 8
-19
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-1 1
-; Execution error (ArityException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:21).
-; Wrong number of args (5) passed to: clojureKatas.kyu5.perimeter/fib-seq-sum/fn--8457
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-1 1
-; Execution error (ArityException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:21).
-; Wrong number of args (5) passed to: clojureKatas.kyu5.perimeter/fib-seq-sum/fn--8468
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-1 1
-; Execution error (ArityException) at clojureKatas.kyu5.perimeter/fib-seq-sum (form-init6839155336723744281.clj:21).
-; Wrong number of args (5) passed to: clojureKatas.kyu5.perimeter/fib-seq-sum/fn--8491
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-1 1
-1 2
-2 3
-3 5
-5 8
-19N
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/fib-seq-sum
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-1 1
-1 2
-2 3
-3 5
-5 8
-20N
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-80N
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-216N
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-#'clojureKatas.kyu5.perimeter/perimeter
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-1 1
-1 2
-2 3
-3 5
-5 8
-80N
-clj꞉clojureKatas.kyu5.perimeter꞉> 
-1 1
-1 2
-2 3
-3 5
-5 8
-8 13
-13 21
-216N
-clj꞉clojureKatas.kyu5.perimeter꞉> 
+clj꞉highest-rank꞉> 
+#'highest-rank/highest-rank
+clj꞉highest-rank꞉> 
+nil
+clj꞉clojureKatas.kyu6.highest-rank-test꞉> 
+12
+clj꞉highest-rank꞉> 
+12
+clj꞉highest-rank꞉> 
+#'highest-rank/highest-rank
+clj꞉highest-rank꞉> 
+#'highest-rank/highest-rank
+clj꞉highest-rank꞉> 
+nil
+clj꞉clojureKatas.kyu6.highest-rank-test꞉> 
+#'highest-rank/highest-rank
+clj꞉highest-rank꞉> 
+nil
+clj꞉clojureKatas.kyu6.highest-rank-test꞉> 
+#'highest-rank/highest-rank
+clj꞉highest-rank꞉> 
+#'clojureKatas.kyu6.highest-rank-test/Testing
+clj꞉clojureKatas.kyu6.highest-rank-test꞉> 
+nil
+clj꞉clojureKatas.kyu6.highest-rank-test꞉> 
+{2 1, 3 3, 5 2, 7 2, 9 1}
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+[3 3]
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Execution error (ArityException) at clojureKatas.kyu6.simple-frequency-sort/eval9957 (form-init1764168668838477482.clj:7).
+; Wrong number of args (6) passed to: clojure.core/sort-by
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([2 1] [9 1] [5 2] [7 2] [3 3])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([3 3] [7 2] [5 2] [9 1] [2 1])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([3 3] [7 2] [5 2] [9 1] [2 1])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/comperator
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+-1
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([3 3] [7 2] [5 2] [9 1] [2 1])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([9 1] [2 1] [7 2] [5 2] [3 3])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([3 3] [7 2] [5 2] [9 1] [2 1])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([9 1] [2 1] [7 2] [5 2] [3 3])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([3 3] [7 2] [5 2] [9 1] [2 1])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([2 1] [9 1] [5 2] [7 2] [3 3])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([3 3] [5 2] [7 2] [2 1] [9 1])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([2 1] [9 1] [5 2] [7 2] [3 3])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([3 3] [5 2] [7 2] [2 1] [9 1])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Execution error (ArityException) at clojureKatas.kyu6.simple-frequency-sort/eval9986 (form-init1764168668838477482.clj:14).
+; Wrong number of args (1) passed to: clojureKatas.kyu6.simple-frequency-sort/comperator
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([3 3] [5 2] [7 2] [2 1] [9 1])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([3 3] [5 2] [7 2] [2 1] [9 1])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Execution error (ArityException) at clojureKatas.kyu6.simple-frequency-sort/eval9998 (form-init1764168668838477482.clj:14).
+; Wrong number of args (1) passed to: clojureKatas.kyu6.simple-frequency-sort/comperator
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Execution error (ArityException) at clojureKatas.kyu6.simple-frequency-sort/eval10002 (form-init1764168668838477482.clj:14).
+; Wrong number of args (1) passed to: clojureKatas.kyu6.simple-frequency-sort/comperator
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Execution error (ArityException) at clojureKatas.kyu6.simple-frequency-sort/eval10006 (form-init1764168668838477482.clj:14).
+; Wrong number of args (1) passed to: clojureKatas.kyu6.simple-frequency-sort/comperator
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Execution error (ArityException) at clojureKatas.kyu6.simple-frequency-sort/eval10010 (form-init1764168668838477482.clj:14).
+; Wrong number of args (1) passed to: clojureKatas.kyu6.simple-frequency-sort/comperator
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Execution error (ArityException) at clojureKatas.kyu6.simple-frequency-sort/eval10014 (form-init1764168668838477482.clj:12).
+; Wrong number of args (1) passed to: clojureKatas.kyu6.simple-frequency-sort/comperator
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Execution error (ArityException) at clojureKatas.kyu6.simple-frequency-sort/eval10018 (form-init1764168668838477482.clj:12).
+; Wrong number of args (1) passed to: clojureKatas.kyu6.simple-frequency-sort/comperator
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /home/jannik/proj/prog/comp-prog/CodeWars_Katas/clojure-katas/clojure-katas ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.30.0"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; nREPL Connection was closed
+; Using host:port 127.0.0.1:45757 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉clojure-katas.core꞉> 
+clj꞉clojure-katas.core꞉> 
+; Jack-in done.
+clj꞉clojure-katas.core꞉> 
+; Syntax error compiling at (src/clojureKatas/kyu6/simple_frequency_sort.clj:12:10).
+; Unable to resolve symbol: comperator in this context
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([3 3] [5 2] [7 2] [2 1] [9 1])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([3 3] [5 2] [7 2] [2 1] [9 1])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([3 3] [5 2] [7 2] [2 1] [9 1])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([3 3] [5 2] [7 2] [2 1] [9 1])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Syntax error compiling at (test/clojureKatas/kyu6/simple_frequency_sort_test.clj:6:10).
+; Unable to resolve symbol: solve in this context
+clj꞉clojureKatas.kyu6.simple-frequency-sort-test꞉> 
+; Syntax error compiling at (test/clojureKatas/kyu6/simple_frequency_sort_test.clj:6:10).
+; Unable to resolve symbol: solve in this context
+clj꞉clojureKatas.kyu6.simple-frequency-sort-test꞉> 
+; Syntax error macroexpanding loop at (src/clojureKatas/kyu6/simple_frequency_sort.clj:5:3).
+; loop requires a vector for its binding in clojureKatas.kyu6.simple-frequency-sort:5
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Syntax error macroexpanding loop at (src/clojureKatas/kyu6/simple_frequency_sort.clj:5:3).
+; loop requires a vector for its binding in clojureKatas.kyu6.simple-frequency-sort:5
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Syntax error compiling at (src/clojureKatas/kyu6/simple_frequency_sort.clj:22:1).
+; Unable to resolve symbol: solve in this context
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([3 3] [5 2] [7 2] [2 1] [9 1])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+[1 2 3 [3 4 5]]
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([1 2 3] 3 4 5)
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+(1 2 3 3 4 5)
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/to-vec
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+(3 3 3 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1)
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/to-vec
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+(3 3 3 5 5 7 7 2 9)
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Syntax error compiling at (test/clojureKatas/kyu6/simple_frequency_sort_test.clj:6:10).
+; Unable to resolve symbol: solve in this context
+clj꞉clojureKatas.kyu6.simple-frequency-sort-test꞉> 
+; Evaluating file: simple_frequency_sort.clj
+; Syntax error (IllegalArgumentException) compiling at (src/clojureKatas/kyu6/simple_frequency_sort.clj:20:1).
+; Don't know how to create ISeq from: java.lang.Long
+; Evaluation of file simple_frequency_sort.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Evaluating file: simple_frequency_sort_test.clj
+; Syntax error (FileNotFoundException) compiling at (test/clojureKatas/kyu6/simple_frequency_sort_test.clj:1:1).
+; Could not locate kata__init.class, kata.clj or kata.cljc on classpath.
+; Evaluation of file simple_frequency_sort_test.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉clojureKatas.kyu6.simple-frequency-sort-test꞉> 
+; Evaluating file: simple_frequency_sort.clj
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Evaluating file: simple_frequency_sort_test.clj
+; Syntax error (FileNotFoundException) compiling at (test/clojureKatas/kyu6/simple_frequency_sort_test.clj:1:1).
+; Could not locate kata__init.class, kata.clj or kata.cljc on classpath.
+; Evaluation of file simple_frequency_sort_test.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉clojureKatas.kyu6.simple-frequency-sort-test꞉> 
+; Evaluating file: simple_frequency_sort.clj
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Evaluating file: simple_frequency_sort_test.clj
+#'clojureKatas.kyu6.simple-frequency-sort-test/basic-tests
+clj꞉clojureKatas.kyu6.simple-frequency-sort-test꞉> 
+
+FAIL in (basic-tests) (simple_frequency_sort_test.clj:8)
+expected: (= (solve [5 9 6 9 6 5 9 9 4 4]) [9 9 9 9 4 4 5 5 6 6])
+  actual: (not (= (9 9 9 9 5 5 6 6 4 4) [9 9 9 9 4 4 5 5 6 6]))
+
+FAIL in (basic-tests) (simple_frequency_sort_test.clj:9)
+expected: (= (solve [4 4 2 5 1 1 3 3 2 8]) [1 1 2 2 3 3 4 4 5 8])
+  actual: (not (= (4 4 2 2 1 1 3 3 5 8) [1 1 2 2 3 3 4 4 5 8]))
+
+FAIL in (basic-tests) (simple_frequency_sort_test.clj:10)
+expected: (= (solve [4 9 5 0 7 3 8 4 9 0]) [0 0 4 4 9 9 3 5 7 8])
+  actual: (not (= (4 4 9 9 0 0 5 7 3 8) [0 0 4 4 9 9 3 5 7 8]))
+nil
+clj꞉clojureKatas.kyu6.simple-frequency-sort-test꞉> 
+; Evaluating file: simple_frequency_sort.clj
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Evaluating file: simple_frequency_sort_test.clj
+
+FAIL in (basic-tests) (simple_frequency_sort_test.clj:8)
+expected: (= (solve [5 9 6 9 6 5 9 9 4 4]) [9 9 9 9 4 4 5 5 6 6])
+  actual: (not (= (9 9 9 9 5 5 6 6 4 4) [9 9 9 9 4 4 5 5 6 6]))
+
+FAIL in (basic-tests) (simple_frequency_sort_test.clj:9)
+expected: (= (solve [4 4 2 5 1 1 3 3 2 8]) [1 1 2 2 3 3 4 4 5 8])
+  actual: (not (= (4 4 2 2 1 1 3 3 5 8) [1 1 2 2 3 3 4 4 5 8]))
+
+FAIL in (basic-tests) (simple_frequency_sort_test.clj:10)
+expected: (= (solve [4 9 5 0 7 3 8 4 9 0]) [0 0 4 4 9 9 3 5 7 8])
+  actual: (not (= (4 4 9 9 0 0 5 7 3 8) [0 0 4 4 9 9 3 5 7 8]))
+nil
+clj꞉clojureKatas.kyu6.simple-frequency-sort-test꞉> 
+(9 9 9 9 5 5 6 6 4 4)
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([9 4] [5 2] [6 2] [4 2])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Execution error (ClassCastException) at java.util.TimSort/countRunAndMakeAscending (TimSort.java:355).
+; class clojure.lang.MapEntry cannot be cast to class java.lang.Number (clojure.lang.MapEntry is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Execution error (ClassCastException) at java.util.TimSort/countRunAndMakeAscending (TimSort.java:355).
+; class clojure.lang.MapEntry cannot be cast to class java.lang.Number (clojure.lang.MapEntry is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Execution error (ClassCastException) at java.util.TimSort/countRunAndMakeAscending (TimSort.java:355).
+; class clojure.lang.MapEntry cannot be cast to class java.lang.Number (clojure.lang.MapEntry is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Execution error (ClassCastException) at java.util.TimSort/countRunAndMakeAscending (TimSort.java:355).
+; class clojure.lang.MapEntry cannot be cast to class java.lang.Number (clojure.lang.MapEntry is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([9 4] [5 2] [6 2] [4 2])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+{5 2, 9 4, 6 2, 4 2}
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+{4 2, 5 2, 6 2, 9 4}
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([4 2] [5 2] [6 2] [9 4])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([9 4] [4 2] [5 2] [6 2])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+(9 9 9 9 4 4 5 5 6 6)
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+nil
+clj꞉clojureKatas.kyu6.simple-frequency-sort-test꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Execution error (ArityException) at clojureKatas.kyu6.simple-frequency-sort/solve (form-init6565892431950643558.clj:19).
+; Wrong number of args (4) passed to: clojure.core/reverse
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Execution error (ArityException) at clojureKatas.kyu6.simple-frequency-sort/solve (form-init6565892431950643558.clj:19).
+; Wrong number of args (4) passed to: clojure.core/reverse
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Execution error (ArityException) at clojureKatas.kyu6.simple-frequency-sort/solve (form-init6565892431950643558.clj:19).
+; Wrong number of args (4) passed to: clojure.core/reverse
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+(((4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  (4 9)
+  ...)
+ ((2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  (2 4)
+  ...)
+ ((2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  (2 5)
+  ...)
+ ((2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  (2 6)
+  ...))
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:557).
+; Don't know how to create ISeq from: java.lang.Long
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+((9 9 9 9) (4 4) (5 5) (6 6))
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+[(9 9 9 9) (4 4) (5 5) (6 6)]
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+; Execution error (ArityException) at clojureKatas.kyu6.simple-frequency-sort/solve (form-init6565892431950643558.clj:21).
+; Wrong number of args (4) passed to: clojure.core/vec
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+[(9 9 9 9) (4 4) (5 5) (6 6)]
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+[(9 9 9 9) (4 4) (5 5) (6 6)]
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+(9 9 9 9 4 4 5 5 6 6)
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+nil
+clj꞉clojureKatas.kyu6.simple-frequency-sort-test꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+
+ERROR in (basic-tests) (AFn.java:429)
+expected: (= (solve [2 3 5 3 7 9 5 3 7]) [3 3 3 5 5 7 7 2 9])
+  actual: clojure.lang.ArityException: Wrong number of args (5) passed to: clojure.core/repeat
+ at clojure.lang.AFn.throwArity (AFn.java:429)
+    clojure.lang.AFn.invoke (AFn.java:48)
+    clojure.lang.AFn.applyToHelper (AFn.java:171)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invokeStatic (core.clj:667)
+    clojure.core$map$fn__5899.invoke (core.clj:2778)
+    clojure.core$map$fn__5884.invoke (core.clj:2759)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5419.invokeStatic (core.clj:139)
+    clojure.core.protocols$seq_reduce.invokeStatic (protocols.clj:24)
+    clojure.core.protocols$fn__8168.invokeStatic (protocols.clj:75)
+    clojure.core.protocols/fn (protocols.clj:75)
+    clojure.core.protocols$fn__8110$G__8105__8123.invoke (protocols.clj:13)
+    clojure.core$reduce.invokeStatic (core.clj:6826)
+    clojure.core$reduce.invoke (core.clj:6812)
+    clojureKatas.kyu6.simple_frequency_sort$solve.invokeStatic (form-init6565892431950643558.clj:21)
+    clojureKatas.kyu6.simple_frequency_sort$solve.invoke (form-init6565892431950643558.clj:12)
+    clojureKatas.kyu6.simple_frequency_sort_test$fn__9843$fn__9844.invoke (simple_frequency_sort_test.clj:6)
+    clojureKatas.kyu6.simple_frequency_sort_test$fn__9843.invokeStatic (simple_frequency_sort_test.clj:6)
+    clojureKatas.kyu6.simple_frequency_sort_test/fn (simple_frequency_sort_test.clj:5)
+    clojure.test$test_var$fn__9761.invoke (test.clj:717)
+    clojure.test$test_var.invokeStatic (test.clj:717)
+    clojure.test$test_var.invoke (test.clj:708)
+    clojureKatas.kyu6.simple_frequency_sort_test$basic_tests.invokeStatic (simple_frequency_sort_test.clj:5)
+    clojureKatas.kyu6.simple_frequency_sort_test$basic_tests.invoke (simple_frequency_sort_test.clj:5)
+    clojureKatas.kyu6.simple_frequency_sort_test$eval10042.invokeStatic (form-init6565892431950643558.clj:18)
+    clojureKatas.kyu6.simple_frequency_sort_test$eval10042.invoke (form-init6565892431950643558.clj:18)
+    clojure.lang.Compiler.eval (Compiler.java:7181)
+    clojure.lang.Compiler.eval (Compiler.java:7136)
+    clojure.core$eval.invokeStatic (core.clj:3202)
+    clojure.core$eval.invoke (core.clj:3198)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1258$fn__1259.invoke (interruptible_eval.clj:87)
+    clojure.lang.AFn.applyToHelper (AFn.java:152)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invokeStatic (core.clj:667)
+    clojure.core$with_bindings_STAR_.invokeStatic (core.clj:1977)
+    clojure.core$with_bindings_STAR_.doInvoke (core.clj:1977)
+    clojure.lang.RestFn.invoke (RestFn.java:425)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1258.invoke (interruptible_eval.clj:87)
+    clojure.main$repl$read_eval_print__9110$fn__9113.invoke (main.clj:437)
+    clojure.main$repl$read_eval_print__9110.invoke (main.clj:437)
+    clojure.main$repl$fn__9119.invoke (main.clj:458)
+    clojure.main$repl.invokeStatic (main.clj:458)
+    clojure.main$repl.doInvoke (main.clj:368)
+    clojure.lang.RestFn.invoke (RestFn.java:1523)
+    nrepl.middleware.interruptible_eval$evaluate.invokeStatic (interruptible_eval.clj:84)
+    nrepl.middleware.interruptible_eval$evaluate.invoke (interruptible_eval.clj:56)
+    nrepl.middleware.interruptible_eval$interruptible_eval$fn__1291$fn__1295.invoke (interruptible_eval.clj:152)
+    clojure.lang.AFn.run (AFn.java:22)
+    nrepl.middleware.session$session_exec$main_loop__1361$fn__1365.invoke (session.clj:218)
+    nrepl.middleware.session$session_exec$main_loop__1361.invoke (session.clj:217)
+    clojure.lang.AFn.run (AFn.java:22)
+    java.lang.Thread.run (Thread.java:833)
+
+ERROR in (basic-tests) (AFn.java:429)
+expected: (= (solve [1 2 3 0 5 0 1 6 8 8 6 9 1]) [1 1 1 0 0 6 6 8 8 2 3 5 9])
+  actual: clojure.lang.ArityException: Wrong number of args (8) passed to: clojure.core/repeat
+ at clojure.lang.AFn.throwArity (AFn.java:429)
+    clojure.lang.AFn.invoke (AFn.java:62)
+    clojure.lang.AFn.applyToHelper (AFn.java:195)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invokeStatic (core.clj:667)
+    clojure.core$map$fn__5899.invoke (core.clj:2778)
+    clojure.core$map$fn__5884.invoke (core.clj:2759)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5419.invokeStatic (core.clj:139)
+    clojure.core.protocols$seq_reduce.invokeStatic (protocols.clj:24)
+    clojure.core.protocols$fn__8168.invokeStatic (protocols.clj:75)
+    clojure.core.protocols/fn (protocols.clj:75)
+    clojure.core.protocols$fn__8110$G__8105__8123.invoke (protocols.clj:13)
+    clojure.core$reduce.invokeStatic (core.clj:6826)
+    clojure.core$reduce.invoke (core.clj:6812)
+    clojureKatas.kyu6.simple_frequency_sort$solve.invokeStatic (form-init6565892431950643558.clj:21)
+    clojureKatas.kyu6.simple_frequency_sort$solve.invoke (form-init6565892431950643558.clj:12)
+    clojureKatas.kyu6.simple_frequency_sort_test$fn__9843$fn__9848.invoke (simple_frequency_sort_test.clj:7)
+    clojureKatas.kyu6.simple_frequency_sort_test$fn__9843.invokeStatic (simple_frequency_sort_test.clj:7)
+    clojureKatas.kyu6.simple_frequency_sort_test/fn (simple_frequency_sort_test.clj:5)
+    clojure.test$test_var$fn__9761.invoke (test.clj:717)
+    clojure.test$test_var.invokeStatic (test.clj:717)
+    clojure.test$test_var.invoke (test.clj:708)
+    clojureKatas.kyu6.simple_frequency_sort_test$basic_tests.invokeStatic (simple_frequency_sort_test.clj:5)
+    clojureKatas.kyu6.simple_frequency_sort_test$basic_tests.invoke (simple_frequency_sort_test.clj:5)
+    clojureKatas.kyu6.simple_frequency_sort_test$eval10042.invokeStatic (form-init6565892431950643558.clj:18)
+    clojureKatas.kyu6.simple_frequency_sort_test$eval10042.invoke (form-init6565892431950643558.clj:18)
+    clojure.lang.Compiler.eval (Compiler.java:7181)
+    clojure.lang.Compiler.eval (Compiler.java:7136)
+    clojure.core$eval.invokeStatic (core.clj:3202)
+    clojure.core$eval.invoke (core.clj:3198)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1258$fn__1259.invoke (interruptible_eval.clj:87)
+    clojure.lang.AFn.applyToHelper (AFn.java:152)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invokeStatic (core.clj:667)
+    clojure.core$with_bindings_STAR_.invokeStatic (core.clj:1977)
+    clojure.core$with_bindings_STAR_.doInvoke (core.clj:1977)
+    clojure.lang.RestFn.invoke (RestFn.java:425)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1258.invoke (interruptible_eval.clj:87)
+    clojure.main$repl$read_eval_print__9110$fn__9113.invoke (main.clj:437)
+    clojure.main$repl$read_eval_print__9110.invoke (main.clj:437)
+    clojure.main$repl$fn__9119.invoke (main.clj:458)
+    clojure.main$repl.invokeStatic (main.clj:458)
+    clojure.main$repl.doInvoke (main.clj:368)
+    clojure.lang.RestFn.invoke (RestFn.java:1523)
+    nrepl.middleware.interruptible_eval$evaluate.invokeStatic (interruptible_eval.clj:84)
+    nrepl.middleware.interruptible_eval$evaluate.invoke (interruptible_eval.clj:56)
+    nrepl.middleware.interruptible_eval$interruptible_eval$fn__1291$fn__1295.invoke (interruptible_eval.clj:152)
+    clojure.lang.AFn.run (AFn.java:22)
+    nrepl.middleware.session$session_exec$main_loop__1361$fn__1365.invoke (session.clj:218)
+    nrepl.middleware.session$session_exec$main_loop__1361.invoke (session.clj:217)
+    clojure.lang.AFn.run (AFn.java:22)
+    java.lang.Thread.run (Thread.java:833)
+
+ERROR in (basic-tests) (AFn.java:429)
+expected: (= (solve [5 9 6 9 6 5 9 9 4 4]) [9 9 9 9 4 4 5 5 6 6])
+  actual: clojure.lang.ArityException: Wrong number of args (4) passed to: clojure.core/repeat
+ at clojure.lang.AFn.throwArity (AFn.java:429)
+    clojure.lang.AFn.invoke (AFn.java:44)
+    clojure.lang.AFn.applyToHelper (AFn.java:165)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invokeStatic (core.clj:667)
+    clojure.core$map$fn__5899.invoke (core.clj:2778)
+    clojure.core$map$fn__5884.invoke (core.clj:2759)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5419.invokeStatic (core.clj:139)
+    clojure.core.protocols$seq_reduce.invokeStatic (protocols.clj:24)
+    clojure.core.protocols$fn__8168.invokeStatic (protocols.clj:75)
+    clojure.core.protocols/fn (protocols.clj:75)
+    clojure.core.protocols$fn__8110$G__8105__8123.invoke (protocols.clj:13)
+    clojure.core$reduce.invokeStatic (core.clj:6826)
+    clojure.core$reduce.invoke (core.clj:6812)
+    clojureKatas.kyu6.simple_frequency_sort$solve.invokeStatic (form-init6565892431950643558.clj:21)
+    clojureKatas.kyu6.simple_frequency_sort$solve.invoke (form-init6565892431950643558.clj:12)
+    clojureKatas.kyu6.simple_frequency_sort_test$fn__9843$fn__9852.invoke (simple_frequency_sort_test.clj:8)
+    clojureKatas.kyu6.simple_frequency_sort_test$fn__9843.invokeStatic (simple_frequency_sort_test.clj:8)
+    clojureKatas.kyu6.simple_frequency_sort_test/fn (simple_frequency_sort_test.clj:5)
+    clojure.test$test_var$fn__9761.invoke (test.clj:717)
+    clojure.test$test_var.invokeStatic (test.clj:717)
+    clojure.test$test_var.invoke (test.clj:708)
+    clojureKatas.kyu6.simple_frequency_sort_test$basic_tests.invokeStatic (simple_frequency_sort_test.clj:5)
+    clojureKatas.kyu6.simple_frequency_sort_test$basic_tests.invoke (simple_frequency_sort_test.clj:5)
+    clojureKatas.kyu6.simple_frequency_sort_test$eval10042.invokeStatic (form-init6565892431950643558.clj:18)
+    clojureKatas.kyu6.simple_frequency_sort_test$eval10042.invoke (form-init6565892431950643558.clj:18)
+    clojure.lang.Compiler.eval (Compiler.java:7181)
+    clojure.lang.Compiler.eval (Compiler.java:7136)
+    clojure.core$eval.invokeStatic (core.clj:3202)
+    clojure.core$eval.invoke (core.clj:3198)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1258$fn__1259.invoke (interruptible_eval.clj:87)
+    clojure.lang.AFn.applyToHelper (AFn.java:152)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invokeStatic (core.clj:667)
+    clojure.core$with_bindings_STAR_.invokeStatic (core.clj:1977)
+    clojure.core$with_bindings_STAR_.doInvoke (core.clj:1977)
+    clojure.lang.RestFn.invoke (RestFn.java:425)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1258.invoke (interruptible_eval.clj:87)
+    clojure.main$repl$read_eval_print__9110$fn__9113.invoke (main.clj:437)
+    clojure.main$repl$read_eval_print__9110.invoke (main.clj:437)
+    clojure.main$repl$fn__9119.invoke (main.clj:458)
+    clojure.main$repl.invokeStatic (main.clj:458)
+    clojure.main$repl.doInvoke (main.clj:368)
+    clojure.lang.RestFn.invoke (RestFn.java:1523)
+    nrepl.middleware.interruptible_eval$evaluate.invokeStatic (interruptible_eval.clj:84)
+    nrepl.middleware.interruptible_eval$evaluate.invoke (interruptible_eval.clj:56)
+    nrepl.middleware.interruptible_eval$interruptible_eval$fn__1291$fn__1295.invoke (interruptible_eval.clj:152)
+    clojure.lang.AFn.run (AFn.java:22)
+    nrepl.middleware.session$session_exec$main_loop__1361$fn__1365.invoke (session.clj:218)
+    nrepl.middleware.session$session_exec$main_loop__1361.invoke (session.clj:217)
+    clojure.lang.AFn.run (AFn.java:22)
+    java.lang.Thread.run (Thread.java:833)
+
+ERROR in (basic-tests) (AFn.java:429)
+expected: (= (solve [4 4 2 5 1 1 3 3 2 8]) [1 1 2 2 3 3 4 4 5 8])
+  actual: clojure.lang.ArityException: Wrong number of args (6) passed to: clojure.core/repeat
+ at clojure.lang.AFn.throwArity (AFn.java:429)
+    clojure.lang.AFn.invoke (AFn.java:52)
+    clojure.lang.AFn.applyToHelper (AFn.java:178)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invokeStatic (core.clj:667)
+    clojure.core$map$fn__5899.invoke (core.clj:2778)
+    clojure.core$map$fn__5884.invoke (core.clj:2759)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5419.invokeStatic (core.clj:139)
+    clojure.core.protocols$seq_reduce.invokeStatic (protocols.clj:24)
+    clojure.core.protocols$fn__8168.invokeStatic (protocols.clj:75)
+    clojure.core.protocols/fn (protocols.clj:75)
+    clojure.core.protocols$fn__8110$G__8105__8123.invoke (protocols.clj:13)
+    clojure.core$reduce.invokeStatic (core.clj:6826)
+    clojure.core$reduce.invoke (core.clj:6812)
+    clojureKatas.kyu6.simple_frequency_sort$solve.invokeStatic (form-init6565892431950643558.clj:21)
+    clojureKatas.kyu6.simple_frequency_sort$solve.invoke (form-init6565892431950643558.clj:12)
+    clojureKatas.kyu6.simple_frequency_sort_test$fn__9843$fn__9856.invoke (simple_frequency_sort_test.clj:9)
+    clojureKatas.kyu6.simple_frequency_sort_test$fn__9843.invokeStatic (simple_frequency_sort_test.clj:9)
+    clojureKatas.kyu6.simple_frequency_sort_test/fn (simple_frequency_sort_test.clj:5)
+    clojure.test$test_var$fn__9761.invoke (test.clj:717)
+    clojure.test$test_var.invokeStatic (test.clj:717)
+    clojure.test$test_var.invoke (test.clj:708)
+    clojureKatas.kyu6.simple_frequency_sort_test$basic_tests.invokeStatic (simple_frequency_sort_test.clj:5)
+    clojureKatas.kyu6.simple_frequency_sort_test$basic_tests.invoke (simple_frequency_sort_test.clj:5)
+    clojureKatas.kyu6.simple_frequency_sort_test$eval10042.invokeStatic (form-init6565892431950643558.clj:18)
+    clojureKatas.kyu6.simple_frequency_sort_test$eval10042.invoke (form-init6565892431950643558.clj:18)
+    clojure.lang.Compiler.eval (Compiler.java:7181)
+    clojure.lang.Compiler.eval (Compiler.java:7136)
+    clojure.core$eval.invokeStatic (core.clj:3202)
+    clojure.core$eval.invoke (core.clj:3198)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1258$fn__1259.invoke (interruptible_eval.clj:87)
+    clojure.lang.AFn.applyToHelper (AFn.java:152)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invokeStatic (core.clj:667)
+    clojure.core$with_bindings_STAR_.invokeStatic (core.clj:1977)
+    clojure.core$with_bindings_STAR_.doInvoke (core.clj:1977)
+    clojure.lang.RestFn.invoke (RestFn.java:425)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1258.invoke (interruptible_eval.clj:87)
+    clojure.main$repl$read_eval_print__9110$fn__9113.invoke (main.clj:437)
+    clojure.main$repl$read_eval_print__9110.invoke (main.clj:437)
+    clojure.main$repl$fn__9119.invoke (main.clj:458)
+    clojure.main$repl.invokeStatic (main.clj:458)
+    clojure.main$repl.doInvoke (main.clj:368)
+    clojure.lang.RestFn.invoke (RestFn.java:1523)
+    nrepl.middleware.interruptible_eval$evaluate.invokeStatic (interruptible_eval.clj:84)
+    nrepl.middleware.interruptible_eval$evaluate.invoke (interruptible_eval.clj:56)
+    nrepl.middleware.interruptible_eval$interruptible_eval$fn__1291$fn__1295.invoke (interruptible_eval.clj:152)
+    clojure.lang.AFn.run (AFn.java:22)
+    nrepl.middleware.session$session_exec$main_loop__1361$fn__1365.invoke (session.clj:218)
+    nrepl.middleware.session$session_exec$main_loop__1361.invoke (session.clj:217)
+    clojure.lang.AFn.run (AFn.java:22)
+    java.lang.Thread.run (Thread.java:833)
+
+ERROR in (basic-tests) (AFn.java:429)
+expected: (= (solve [4 9 5 0 7 3 8 4 9 0]) [0 0 4 4 9 9 3 5 7 8])
+  actual: clojure.lang.ArityException: Wrong number of args (7) passed to: clojure.core/repeat
+ at clojure.lang.AFn.throwArity (AFn.java:429)
+    clojure.lang.AFn.invoke (AFn.java:57)
+    clojure.lang.AFn.applyToHelper (AFn.java:186)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invokeStatic (core.clj:667)
+    clojure.core$map$fn__5899.invoke (core.clj:2778)
+    clojure.core$map$fn__5884.invoke (core.clj:2759)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5419.invokeStatic (core.clj:139)
+    clojure.core.protocols$seq_reduce.invokeStatic (protocols.clj:24)
+    clojure.core.protocols$fn__8168.invokeStatic (protocols.clj:75)
+    clojure.core.protocols/fn (protocols.clj:75)
+    clojure.core.protocols$fn__8110$G__8105__8123.invoke (protocols.clj:13)
+    clojure.core$reduce.invokeStatic (core.clj:6826)
+    clojure.core$reduce.invoke (core.clj:6812)
+    clojureKatas.kyu6.simple_frequency_sort$solve.invokeStatic (form-init6565892431950643558.clj:21)
+    clojureKatas.kyu6.simple_frequency_sort$solve.invoke (form-init6565892431950643558.clj:12)
+    clojureKatas.kyu6.simple_frequency_sort_test$fn__9843.invokeStatic (simple_frequency_sort_test.clj:10)
+    clojureKatas.kyu6.simple_frequency_sort_test/fn (simple_frequency_sort_test.clj:5)
+    clojure.test$test_var$fn__9761.invoke (test.clj:717)
+    clojure.test$test_var.invokeStatic (test.clj:717)
+    clojure.test$test_var.invoke (test.clj:708)
+    clojureKatas.kyu6.simple_frequency_sort_test$basic_tests.invokeStatic (simple_frequency_sort_test.clj:5)
+    clojureKatas.kyu6.simple_frequency_sort_test$basic_tests.invoke (simple_frequency_sort_test.clj:5)
+    clojureKatas.kyu6.simple_frequency_sort_test$eval10042.invokeStatic (form-init6565892431950643558.clj:18)
+    clojureKatas.kyu6.simple_frequency_sort_test$eval10042.invoke (form-init6565892431950643558.clj:18)
+    clojure.lang.Compiler.eval (Compiler.java:7181)
+    clojure.lang.Compiler.eval (Compiler.java:7136)
+    clojure.core$eval.invokeStatic (core.clj:3202)
+    clojure.core$eval.invoke (core.clj:3198)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1258$fn__1259.invoke (interruptible_eval.clj:87)
+    clojure.lang.AFn.applyToHelper (AFn.java:152)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invokeStatic (core.clj:667)
+    clojure.core$with_bindings_STAR_.invokeStatic (core.clj:1977)
+    clojure.core$with_bindings_STAR_.doInvoke (core.clj:1977)
+    clojure.lang.RestFn.invoke (RestFn.java:425)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1258.invoke (interruptible_eval.clj:87)
+    clojure.main$repl$read_eval_print__9110$fn__9113.invoke (main.clj:437)
+    clojure.main$repl$read_eval_print__9110.invoke (main.clj:437)
+    clojure.main$repl$fn__9119.invoke (main.clj:458)
+    clojure.main$repl.invokeStatic (main.clj:458)
+    clojure.main$repl.doInvoke (main.clj:368)
+    clojure.lang.RestFn.invoke (RestFn.java:1523)
+    nrepl.middleware.interruptible_eval$evaluate.invokeStatic (interruptible_eval.clj:84)
+    nrepl.middleware.interruptible_eval$evaluate.invoke (interruptible_eval.clj:56)
+    nrepl.middleware.interruptible_eval$interruptible_eval$fn__1291$fn__1295.invoke (interruptible_eval.clj:152)
+    clojure.lang.AFn.run (AFn.java:22)
+    nrepl.middleware.session$session_exec$main_loop__1361$fn__1365.invoke (session.clj:218)
+    nrepl.middleware.session$session_exec$main_loop__1361.invoke (session.clj:217)
+    clojure.lang.AFn.run (AFn.java:22)
+    java.lang.Thread.run (Thread.java:833)
+nil
+clj꞉clojureKatas.kyu6.simple-frequency-sort-test꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+(9 9 9 9 4 4 5 5 6 6)
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+(32
+ 32
+ 32
+ 32
+ 32
+ 32
+ 32
+ 32
+ 32
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 48
+ 48
+ 48
+ 48
+ 48
+ 48
+ 48
+ 48
+ 18
+ 18
+ 18
+ 18
+ 18
+ 18
+ 18
+ 18
+ 40
+ 40
+ 40
+ 40
+ 40
+ 38
+ 38
+ 38
+ 38
+ 22
+ 22
+ 22
+ 11
+ 11
+ 11
+ 15
+ ...)
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+(32
+ 32
+ 32
+ 32
+ 32
+ 32
+ 32
+ 32
+ 32
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 48
+ 48
+ 48
+ 48
+ 48
+ 48
+ 48
+ 48
+ 18
+ 18
+ 18
+ 18
+ 18
+ 18
+ 18
+ 18
+ 40
+ 40
+ 40
+ 40
+ 40
+ 38
+ 38
+ 38
+ 38
+ 22
+ 22
+ 22
+ 11
+ 11
+ 11
+ 15
+ ...)
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+{15 2, 48 8, 32 9, 40 5, 22 3, 25 1, 2 9, 47 2, 11 3, 38 4, 18 8, 49 1}
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+(2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 11
+ 11
+ 11
+ 15
+ 15
+ 18
+ 18
+ 18
+ 18
+ 18
+ 18
+ 18
+ 18
+ 22
+ 22
+ 22
+ 25
+ 32
+ 32
+ 32
+ 32
+ 32
+ 32
+ 32
+ 32
+ 32
+ 38
+ 38
+ 38
+ 38
+ 40
+ 40
+ 40
+ 40
+ 40
+ 47
+ 47
+ 48
+ 48
+ 48
+ 48
+ ...)
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+{15 2, 48 8, 32 9, 40 5, 22 3, 25 1, 2 9, 47 2, 11 3, 38 4, 18 8, 49 1}
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([2 9] [11 3] [15 2] [18 8] [22 3] [25 1] [32 9] [38 4] [40 5] [47 2] [48 8] [49 1])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+([2 9] [32 9] [18 8] [48 8] [40 5] [38 4] [11 3] [22 3] [15 2] [47 2] [25 1] [49 1])
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+(2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 32
+ 32
+ 32
+ 32
+ 32
+ 32
+ 32
+ 32
+ 32
+ 18
+ 18
+ 18
+ 18
+ 18
+ 18
+ 18
+ 18
+ 48
+ 48
+ 48
+ 48
+ 48
+ 48
+ 48
+ 48
+ 40
+ 40
+ 40
+ 40
+ 40
+ 38
+ 38
+ 38
+ 38
+ 11
+ 11
+ 11
+ 22
+ 22
+ 22
+ 15
+ ...)
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+#'clojureKatas.kyu6.simple-frequency-sort/solve
+clj꞉clojureKatas.kyu6.simple-frequency-sort꞉> 
+nil
+clj꞉clojureKatas.kyu6.simple-frequency-sort-test꞉> 
