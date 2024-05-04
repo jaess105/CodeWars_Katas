@@ -7,7 +7,7 @@ fn least_larger(a: &[i32], i: usize) -> Option<usize> {
         }
     }
 
-    lowest_higher.and_then(|(j, x)| Some(j))
+    lowest_higher.and_then(|(j, _)| Some(j))
 }
 
 // Add your tests here.
