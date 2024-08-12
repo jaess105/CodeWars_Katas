@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="kyu8.ExampleSentenceSmashKtTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-04-28T14:01:25" hostname="Janniks-PC" time="0.042">
-  <properties/>
-  <testcase name="validate()" classname="kyu8.ExampleSentenceSmashKtTest" time="0.039"/>
-  <testcase name="validateOneWord()" classname="kyu8.ExampleSentenceSmashKtTest" time="0.0"/>
-  <testcase name="validateEmpty()" classname="kyu8.ExampleSentenceSmashKtTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
