@@ -15,5 +15,5 @@ let initializeNames (name: string) : string =
             if i = 0 || i = len - 1 then
                 word // First and last remain unchanged
             else
-                $"{word.[0]}.") // Middle names get abbreviated
+                $"{word[0]}.") // Middle names get abbreviated
         |> String.concat " "
