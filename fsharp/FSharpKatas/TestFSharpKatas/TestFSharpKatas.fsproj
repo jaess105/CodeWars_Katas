@@ -9,8 +9,9 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Include="Kyu7\InitializeMyNameTests.fs"/>
+        <!-- The program file must be the last file in the declatration. Otherwise a compile error occurs -->
         <Compile Include="Program.fs"/>
-        <Compile Include="Kyu7\InitializeMyNameTest.fs" />
     </ItemGroup>
 
     <ItemGroup>
