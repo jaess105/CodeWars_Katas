@@ -8,8 +8,9 @@
     <ItemGroup>
         <Compile Include="Library.fs"/>
         <Compile Include="Kyu7\InitializeMyName.fs" />
+        <Compile Include="Kyu7\FindMinAndMax.fs" />
         <Compile Include="Kyu6\WhichAreIn.fs" />
-        <Compile Include="Kyu6\FindMinAndMax.fs" />
+        <Compile Include="Kyu6\MiniStringFuck.fs" />
     </ItemGroup>
 
 </Project>

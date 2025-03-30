@@ -1,4 +1,4 @@
-module FSharpKatas.Kyu6.FindMinAndMax
+module FSharpKatas.Kyu7.FindMinAndMax
 
 let getMinMax (l: int list) =
     let rec getMinMaxRec (l: int list) (min: int) (max: int) =

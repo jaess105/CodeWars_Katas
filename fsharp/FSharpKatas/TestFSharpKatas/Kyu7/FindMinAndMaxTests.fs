@@ -1,6 +1,6 @@
 namespace TestFSharpKatas.Kyu7
 
-open FSharpKatas.Kyu6.FindMinAndMax
+open FSharpKatas.Kyu7.FindMinAndMax
 open NUnit.Framework
 
 module FindMinAndMaxTests =
