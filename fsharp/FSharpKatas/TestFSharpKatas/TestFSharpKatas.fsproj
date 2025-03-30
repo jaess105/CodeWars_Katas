@@ -9,8 +9,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="InitializeMyNameTest.fs" />
         <Compile Include="Program.fs"/>
+        <Compile Include="Kyu7\InitializeMyNameTest.fs" />
     </ItemGroup>
 
     <ItemGroup>

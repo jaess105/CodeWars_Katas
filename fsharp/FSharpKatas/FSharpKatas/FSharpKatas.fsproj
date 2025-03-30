@@ -7,7 +7,7 @@
 
     <ItemGroup>
         <Compile Include="Library.fs"/>
-        <Compile Include="InitializeMyName.fs" />
+        <Compile Include="Kyu7\InitializeMyName.fs" />
     </ItemGroup>
 
 </Project>
