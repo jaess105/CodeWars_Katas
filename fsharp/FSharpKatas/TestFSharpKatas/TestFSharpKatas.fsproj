@@ -9,6 +9,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Include="Kyu6\WhichAreInTests.fs"/>
+
         <Compile Include="Kyu7\InitializeMyNameTests.fs"/>
         <!-- The program file must be the last file in the declatration. Otherwise a compile error occurs -->
         <Compile Include="Program.fs"/>
@@ -23,7 +25,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\FSharpKatas\FSharpKatas.fsproj" />
+        <ProjectReference Include="..\FSharpKatas\FSharpKatas.fsproj"/>
     </ItemGroup>
-
 </Project>

@@ -1,13 +1,13 @@
-module TestFSharpKatas.Kyu6.WhichAreInTests
+namespace TestFSharpKatas.Kyu6
 
 open FSharpKatas.Kyu6.WhichAreIn
 open NUnit.Framework
 
-module Tests =
-
+module WhichAreInTests =
     // Helper function for the test
     let testInArray a1 a2 expectedOutput =
-        Assert.AreEqual(expectedOutput, inArray a1 a2)
+        let res = inArray a1 a2
+        Assert.AreEqual(expectedOutput, res, $"{res} does not equal {expectedOutput}")
 
     [<TestFixture>]
     type Tests() =
