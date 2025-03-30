@@ -4,16 +4,16 @@ module FSharpKatas.InitializeMyName
 
 
 let initializeNames (name: string) : string =
-    let split = name.Split ' '
-    let len = split.Length
+    let words = name.Split([| ' ' |], System.StringSplitOptions.RemoveEmptyEntries) // Safe split
+    let len = words.Length
 
-    match len with
-    | n when n <= 2 -> name
-    | _ ->
-        split
-        |> Array.mapi (fun i var ->
-            match i with
-            | 0 -> var
-            | n when n = len - 1 -> var
-            | _ -> $"{var[0]}.")
+    if len <= 2 then
+        name
+    else
+        words
+        |> Array.mapi (fun i word ->
+            if i = 0 || i = len - 1 then
+                word // First and last remain unchanged
+            else
+                $"{word.[0]}.") // Middle names get abbreviated
         |> String.concat " "
